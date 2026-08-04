@@ -3,11 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Aaron Gulzar's portfolio for data science, machine learning, AI and software development projects."
-    />
-    <title>Aaron Gulzar | Data Science Portfolio</title>
+    <meta name="description" content="Portfolio of Aaron Gulzar, an MSc Data Science student building machine-learning, data and software-engineering projects." />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Aaron Gulzar | Machine Learning &amp; Data Science</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
@@ -16,256 +14,281 @@
 
     <header class="site-header">
       <nav class="nav container" aria-label="Primary navigation">
-        <a class="logo" href="index.html" aria-label="Aaron Gulzar home">
-          <span class="logo-mark" aria-hidden="true">AG</span>
+        <a class="brand" href="index.html" aria-label="Aaron Gulzar home">
+          <span class="brand-mark" aria-hidden="true">AG</span>
           <span>Aaron Gulzar</span>
         </a>
-
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#education">Education</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
+        <div class="nav-menu">
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation menu">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+          </button>
+          <div class="nav-links" id="primary-links" data-open="false">
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z" /></svg>
+            <span class="theme-label">Theme</span>
+          </button>
         </div>
-
-        <button class="theme-toggle" type="button" aria-label="Switch colour theme">
-          <span class="theme-toggle-icon" aria-hidden="true">◐</span>
-          <span>Theme</span>
-        </button>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero section">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">MSc Data Science student</p>
-            <h1>Aaron Gulzar</h1>
-            <p class="hero-subtitle">
-              Machine Learning, Data Science and Software Development.
+          <div>
+            <p class="eyebrow">Graduate portfolio</p>
+            <h1 id="hero-title">Aaron Gulzar</h1>
+            <p class="hero-title-note">MSc Data Science, Queen Mary University of London</p>
+            <p class="hero-specialisms">Machine Learning&nbsp; • &nbsp;Data Science&nbsp; • &nbsp;Software Engineering</p>
+            <p class="hero-intro">
+              I build and evaluate practical machine-learning systems, with work spanning computer vision, information retrieval and software development. My approach combines scientific rigour with clear, maintainable implementation.
             </p>
-            <p class="hero-text">
-              I am building a practical portfolio across machine learning,
-              information retrieval, neural networks and software projects.
-            </p>
-            <div class="button-row" aria-label="Primary actions">
+            <div class="button-row" aria-label="Portfolio actions">
               <a class="button button-primary" href="#projects">View Projects</a>
               <a class="button button-secondary" href="assets/cv/aaron-gulzar-cv.md" download>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14" /></svg>
                 Download CV
               </a>
+              <a class="button button-secondary" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.5 1.4-4.5-2.5-6-3m12 6v-3.9c0-1.1.1-1.6-.5-2.3 2.8-.3 5.7-1.4 5.7-6.2A4.8 4.8 0 0 0 19 6.3a4.5 4.5 0 0 0-.1-3.3S17.8 2.7 15 4.3a11.4 11.4 0 0 0-6 0C6.2 2.7 5.1 3 5.1 3A4.5 4.5 0 0 0 5 6.3a4.8 4.8 0 0 0-1.2 3.3c0 4.8 2.9 5.9 5.7 6.2-.6.7-.6 1.4-.5 2.3V22" /></svg>
+                GitHub
+              </a>
+              <span class="button button-disabled" aria-disabled="true" title="LinkedIn profile URL has not been added">LinkedIn unavailable</span>
             </div>
           </div>
-
-          <aside class="hero-panel reveal" aria-label="Portfolio focus">
-            <p class="panel-label">Current focus</p>
-            <ul class="focus-list">
-              <li>Machine learning</li>
-              <li>Data analysis</li>
-              <li>Information retrieval</li>
-              <li>Software development</li>
-            </ul>
+          <aside class="hero-summary" aria-label="Professional summary">
+            <dl>
+              <div>
+                <dt>Current study</dt>
+                <dd>MSc Data Science</dd>
+              </div>
+              <div>
+                <dt>Technical focus</dt>
+                <dd>Applied ML &amp; reliable evaluation</dd>
+              </div>
+              <div>
+                <dt>Background</dt>
+                <dd>Biochemistry &amp; scientific analysis</dd>
+              </div>
+              <div>
+                <dt>Based in</dt>
+                <dd>United Kingdom</dd>
+              </div>
+            </dl>
           </aside>
         </div>
       </section>
 
-      <section class="section" id="about">
-        <div class="container split">
-          <div>
-            <p class="eyebrow">About</p>
-            <h2>Data science student with a scientific background.</h2>
-          </div>
-          <div class="content-card">
-            <p>
-              I am an MSc Data Science student at Queen Mary University of
-              London, with expected completion in September 2026. I previously
-              graduated with a BSc (Hons) Biochemistry from Sheffield Hallam
-              University in 2025.
-            </p>
-            <p>
-              My interests include machine learning, artificial intelligence,
-              data analysis and software development. This portfolio highlights
-              work that reflects those areas without overstating project results
-              or inventing claims.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-muted" id="projects">
+      <section class="section section-muted" id="projects" aria-labelledby="projects-heading">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Featured projects</p>
-            <h2>Selected academic, technical and game-development work.</h2>
+            <div>
+              <p class="eyebrow">Featured Projects</p>
+              <h2 id="projects-heading">Technical work, presented with evidence.</h2>
+            </div>
+            <p>Academic experiments and software projects with transparent status, methods and limitations. Exact metrics are shown only where preserved results support them.</p>
           </div>
 
           <div class="project-grid">
-            <article class="project-card reveal">
-              <div>
-                <p class="project-kicker">Information Retrieval</p>
-                <h3>Information Retrieval with BM25</h3>
-                <p>
-                  A project focused on ranking documents using BM25 and core
-                  information retrieval techniques.
-                </p>
+            <article class="project-card">
+              <div class="project-preview">
+                <img src="assets/projects/deep-learning/cifar10_network_overview.svg" alt="Architecture preview of the CIFAR-10 convolutional network" width="1200" height="565" />
               </div>
-              <a class="text-link" href="projects/information-retrieval.html">
-                View project
-              </a>
+              <div class="project-card-body">
+                <div class="card-meta"><span class="status status-complete">Complete</span><span class="project-type">Deep Learning</span></div>
+                <h3>Deep Learning Image Classification</h3>
+                <p class="project-description">A custom CIFAR-10 architecture and controlled Fashion-MNIST ablation study implemented in PyTorch.</p>
+                <ul class="tag-list" aria-label="Technologies"><li>Python</li><li>PyTorch</li><li>torchvision</li><li>Matplotlib</li></ul>
+                <div class="metric"><span class="metric-label">Best CIFAR-10 test accuracy</span><strong class="metric-value">87.81%</strong></div>
+                <div class="card-actions">
+                  <a class="button button-primary" href="projects/cnn-image-classification.html">View Project</a>
+                  <a class="button button-secondary" href="https://github.com/aarongulzar/deep-learning-image-classification" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                </div>
+              </div>
             </article>
 
-            <article class="project-card reveal">
-              <div>
-                <p class="project-kicker">Neural Networks</p>
-                <h3>CNN Image Classification</h3>
-                <p>
-                  Image classification work using convolutional neural networks
-                  and a Python-based notebook workflow.
-                </p>
+            <article class="project-card">
+              <div class="project-preview" aria-hidden="true">
+                <div class="preview-system"><span class="preview-node">Query</span><span class="preview-arrow">→</span><span class="preview-node preview-node-accent">BM25</span><span class="preview-arrow">→</span><span class="preview-node">Ranked docs</span></div>
               </div>
-              <a class="text-link" href="projects/cnn-image-classification.html">
-                View project
-              </a>
+              <div class="project-card-body">
+                <div class="card-meta"><span class="status status-complete">Complete</span><span class="project-type">Information Retrieval</span></div>
+                <h3>Information Retrieval</h3>
+                <p class="project-description">A search-ranking project exploring BM25 scoring, text preprocessing and interpretable retrieval results.</p>
+                <ul class="tag-list" aria-label="Technologies"><li>Python</li><li>BM25</li><li>Jupyter</li><li>Text processing</li></ul>
+                <div class="metric"><span class="metric-label">Core ranking method</span><strong class="metric-value">BM25</strong></div>
+                <div class="card-actions">
+                  <a class="button button-primary" href="projects/information-retrieval.html">View Project</a>
+                  <span class="button button-disabled" aria-disabled="true">GitHub Repository unavailable</span>
+                </div>
+              </div>
             </article>
 
-            <article class="project-card reveal">
-              <div>
-                <p class="project-kicker">In progress</p>
+            <article class="project-card">
+              <div class="project-preview" aria-hidden="true">
+                <div class="preview-system"><span class="preview-node">Clinical data</span><span class="preview-arrow">→</span><span class="preview-node preview-node-accent">ML pipeline</span><span class="preview-arrow">→</span><span class="preview-node">Evaluation</span></div>
+              </div>
+              <div class="project-card-body">
+                <div class="card-meta"><span class="status status-progress">In Progress</span><span class="project-type">Machine Learning</span></div>
                 <h3>Disease Prediction using Machine Learning</h3>
-                <p>
-                  An in-progress machine-learning project exploring disease
-                  prediction with responsible evaluation.
-                </p>
+                <p class="project-description">An in-progress classification project centred on careful preprocessing, model comparison and responsible evaluation.</p>
+                <ul class="tag-list" aria-label="Technologies"><li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li></ul>
+                <div class="metric"><span class="metric-label">Current phase</span><strong class="metric-value">Development</strong></div>
+                <div class="card-actions">
+                  <a class="button button-primary" href="projects/disease-prediction.html">View Project</a>
+                  <span class="button button-disabled" aria-disabled="true">GitHub Repository unavailable</span>
+                </div>
               </div>
-              <a class="text-link" href="projects/disease-prediction.html">
-                View project
-              </a>
             </article>
 
-            <article class="project-card reveal">
-              <div>
-                <p class="project-kicker">Roblox Studio</p>
+            <article class="project-card">
+              <div class="project-preview">
+                <pre class="preview-code" aria-label="Lua code preview"><span class="code-keyword">local</span> habitat = Zoo:CreateHabitat()
+habitat:AddAnimal(animal)
+economy:UpdateRevenue()
+player:UnlockExpansion()</pre>
+              </div>
+              <div class="project-card-body">
+                <div class="card-meta"><span class="status status-progress">In Progress</span><span class="project-type">Game Development</span></div>
                 <h3>Stud Safari</h3>
-                <p>
-                  A Roblox zoo-management game project built around gameplay
-                  systems, Lua scripting and interactive design.
-                </p>
-              </div>
-              <a class="text-link" href="projects/stud-safari.html">
-                View project
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="skills">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Skills</p>
-            <h2>Tools and topics represented by my current work.</h2>
-          </div>
-
-          <div class="skills-grid" aria-label="Skills list">
-            <span>Python</span>
-            <span>SQL</span>
-            <span>Lua</span>
-            <span>pandas</span>
-            <span>NumPy</span>
-            <span>scikit-learn</span>
-            <span>machine learning</span>
-            <span>neural networks</span>
-            <span>information retrieval</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Jupyter</span>
-            <span>Google Colab</span>
-            <span>VS Code</span>
-            <span>Roblox Studio</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-muted" id="education">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Education</p>
-            <h2>Academic background.</h2>
-          </div>
-
-          <div class="timeline">
-            <article class="timeline-item">
-              <p class="timeline-meta">Expected completion September 2026</p>
-              <div>
-                <h3>MSc Data Science</h3>
-                <p>Queen Mary University of London</p>
+                <p class="project-description">A Roblox zoo-management project focused on gameplay systems, Lua scripting and interactive design.</p>
+                <ul class="tag-list" aria-label="Technologies"><li>Lua</li><li>Roblox Studio</li><li>Git</li><li>VS Code</li></ul>
+                <div class="metric"><span class="metric-label">Engineering focus</span><strong class="metric-value">Game systems</strong></div>
+                <div class="card-actions">
+                  <a class="button button-primary" href="projects/stud-safari.html">View Project</a>
+                  <span class="button button-disabled" aria-disabled="true">GitHub Repository unavailable</span>
+                </div>
               </div>
             </article>
 
-            <article class="timeline-item">
-              <p class="timeline-meta">Graduated 2025</p>
-              <div>
-                <h3>BSc (Hons) Biochemistry</h3>
-                <p>Sheffield Hallam University</p>
+            <article class="project-card">
+              <div class="project-preview">
+                <pre class="preview-code" aria-label="Pine Script code preview"><span class="code-keyword">indicator</span>("Signal Suite", overlay=true)
+trend = ta.ema(close, length)
+signal = ta.crossover(close, trend)
+plot(trend)</pre>
+              </div>
+              <div class="project-card-body">
+                <div class="card-meta"><span class="status status-progress">In Progress</span><span class="project-type">Quantitative Tools</span></div>
+                <h3>TradingView Indicator Suite</h3>
+                <p class="project-description">A developing suite of chart indicators organised around reusable signal logic and clear visual output.</p>
+                <ul class="tag-list" aria-label="Technologies"><li>Pine Script</li><li>TradingView</li><li>Technical analysis</li><li>Version control</li></ul>
+                <div class="metric"><span class="metric-label">Current phase</span><strong class="metric-value">Development</strong></div>
+                <div class="card-actions">
+                  <a class="button button-primary" href="projects/tradingview-indicator-suite.html">View Project</a>
+                  <span class="button button-disabled" aria-disabled="true">GitHub Repository unavailable</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-preview">
+                <pre class="preview-code" aria-label="Portfolio code preview"><span class="code-keyword">&lt;main&gt;</span>
+  &lt;section id="projects"&gt;
+    Semantic, responsive content
+  &lt;/section&gt;
+<span class="code-keyword">&lt;/main&gt;</span></pre>
+              </div>
+              <div class="project-card-body">
+                <div class="card-meta"><span class="status status-complete">Complete</span><span class="project-type">Web Engineering</span></div>
+                <h3>Portfolio Website</h3>
+                <p class="project-description">A responsive, accessible static portfolio built without a framework or runtime dependencies.</p>
+                <ul class="tag-list" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+                <div class="metric"><span class="metric-label">Frontend dependencies</span><strong class="metric-value">0</strong></div>
+                <div class="card-actions">
+                  <a class="button button-primary" href="projects/portfolio-website.html">View Project</a>
+                  <a class="button button-secondary" href="https://github.com/aarongulzar/portfolio" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                </div>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="experience">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>Work and volunteering placeholders.</h2>
-          </div>
-
-          <div class="experience-grid">
-            <article class="content-card">
-              <h3>Tesco retail experience</h3>
-              <p>
-                Details to be added. This section is intentionally kept as a
-                placeholder until dates, duties and achievements are confirmed.
-              </p>
-            </article>
-
-            <article class="content-card">
-              <h3>Volunteering</h3>
-              <p>
-                Details to be added. This section is intentionally kept as a
-                placeholder until dates, duties and achievements are confirmed.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="container contact-card">
+      <section class="section" id="about" aria-labelledby="about-heading">
+        <div class="container about-grid">
           <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Open to graduate data science, AI and software roles.</h2>
-            <p>
-              The best way to get in touch is by email. GitHub is linked below,
-              and the LinkedIn URL placeholder is ready to replace when you want
-              to add it.
-            </p>
+            <p class="eyebrow">About</p>
+            <h2 id="about-heading">Scientific foundations, applied through engineering.</h2>
           </div>
+          <div class="about-copy">
+            <p>I am studying for an MSc in Data Science at Queen Mary University of London after completing a BSc (Hons) in Biochemistry at Sheffield Hallam University.</p>
+            <p>My scientific background shaped how I approach machine learning and artificial intelligence: define the question carefully, control the experiment, inspect the evidence and communicate limitations. I am developing that foundation through software-engineering practice, with an interest in building practical systems that are reliable, understandable and useful.</p>
+          </div>
+        </div>
+      </section>
 
-          <address class="contact-links">
-            <a href="mailto:aarongulzar@hotmail.com">aarongulzar@hotmail.com</a>
-            <a href="https://github.com/aarongulzar">github.com/aarongulzar</a>
-            <span>LinkedIn URL: add your profile link here</span>
+      <section class="section section-muted" id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+          <div class="section-heading">
+            <div><p class="eyebrow">Skills</p><h2 id="skills-heading">Repository-backed technical skills.</h2></div>
+            <p>Grouped by how they are used across university work and current repositories.</p>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card"><h3>Programming</h3><ul><li>Python</li><li>SQL</li><li>Lua</li><li>HTML, CSS &amp; JavaScript</li></ul></article>
+            <article class="skill-card"><h3>Machine Learning</h3><ul><li>PyTorch</li><li>scikit-learn</li><li>Convolutional neural networks</li><li>Model evaluation</li></ul></article>
+            <article class="skill-card"><h3>Data Science</h3><ul><li>pandas</li><li>NumPy</li><li>Matplotlib</li><li>Information retrieval</li></ul></article>
+            <article class="skill-card"><h3>Software Engineering</h3><ul><li>Git &amp; GitHub</li><li>Modular design</li><li>Responsive interfaces</li><li>Technical documentation</li></ul></article>
+            <article class="skill-card"><h3>Tools</h3><ul><li>Jupyter Notebook</li><li>Google Colab</li><li>VS Code</li><li>Roblox Studio</li></ul></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-heading">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">Education</p><h2 id="education-heading">Academic background.</h2></div><p>Postgraduate data science training built on an undergraduate scientific education.</p></div>
+          <div class="education-grid">
+            <article class="education-card">
+              <header><div><p class="institution">Queen Mary University of London</p><h3>MSc Data Science</h3></div><span class="date">Expected Sep 2026</span></header>
+              <p>Postgraduate study focused on data science, machine learning and related computational methods.</p>
+            </article>
+            <article class="education-card">
+              <header><div><p class="institution">Sheffield Hallam University</p><h3>BSc (Hons) Biochemistry</h3></div><span class="date">Graduated 2025</span></header>
+              <p>A scientific foundation in biological systems, experimental reasoning and analytical interpretation.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="experience" aria-labelledby="experience-heading">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">Experience</p><h2 id="experience-heading">Work and community experience.</h2></div><p>Presented at the level currently supported by the available record.</p></div>
+          <div class="experience-grid">
+            <article class="experience-card"><header><div><p class="organisation">Tesco</p><h3>Retail Experience</h3></div></header><p>Customer-facing retail work in a team environment, requiring reliability, clear communication and attention to day-to-day operational responsibilities.</p></article>
+            <article class="experience-card"><header><div><p class="organisation">Community</p><h3>Volunteering</h3></div></header><p>Volunteering experience contributing time and support to community activity. Specific responsibilities and dates will be added once verified.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-heading">
+        <div class="container contact-panel">
+          <div><p class="eyebrow">Contact</p><h2 id="contact-heading">Open to graduate machine-learning, data and software roles.</h2><p>For opportunities or project discussions, email is the most direct way to get in touch.</p></div>
+          <address>
+            <a class="inline-link" href="mailto:aarongulzar@hotmail.com">aarongulzar@hotmail.com</a>
+            <a class="inline-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">github.com/aarongulzar</a>
+            <span class="link-unavailable">LinkedIn profile URL not yet provided</span>
           </address>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year">2026</span> Aaron Gulzar.</p>
-        <a href="#main">Back to top</a>
+      <div class="container">
+        <div class="footer-main">
+          <p><strong>Aaron Gulzar</strong><br /><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p>
+          <div class="footer-links" aria-label="Footer links">
+            <a class="footer-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span class="footer-link link-unavailable" aria-disabled="true">LinkedIn unavailable</span>
+            <a class="footer-link" href="mailto:aarongulzar@hotmail.com">Email</a>
+          </div>
+        </div>
+        <div class="footer-meta"><span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span></div>
       </div>
     </footer>
   </body>

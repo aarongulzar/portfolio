@@ -1,98 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Information Retrieval with BM25 project by Aaron Gulzar."
-    />
-    <title>Information Retrieval with BM25 | Aaron Gulzar</title>
-    <link rel="stylesheet" href="../style.css" />
-    <script src="../script.js" defer></script>
-  </head>
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="Information retrieval and BM25 ranking project by Aaron Gulzar." /><meta name="theme-color" content="#0f172a" /><title>Information Retrieval | Aaron Gulzar</title><link rel="stylesheet" href="../style.css" /><script src="../script.js" defer></script></head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
-
-    <header class="site-header">
-      <nav class="nav container" aria-label="Primary navigation">
-        <a class="logo" href="../index.html" aria-label="Aaron Gulzar home">
-          <span class="logo-mark" aria-hidden="true">AG</span>
-          <span>Aaron Gulzar</span>
-        </a>
-
-        <div class="nav-links">
-          <a href="../index.html#about">About</a>
-          <a href="../index.html#projects">Projects</a>
-          <a href="../index.html#skills">Skills</a>
-          <a href="../index.html#education">Education</a>
-          <a href="../index.html#contact">Contact</a>
-        </div>
-
-        <button class="theme-toggle" type="button" aria-label="Switch colour theme">
-          <span class="theme-toggle-icon" aria-hidden="true">◐</span>
-          <span>Theme</span>
-        </button>
-      </nav>
-    </header>
-
+    <header class="site-header"><nav class="nav container" aria-label="Primary navigation"><a class="brand" href="../index.html" aria-label="Aaron Gulzar home"><span class="brand-mark" aria-hidden="true">AG</span><span>Aaron Gulzar</span></a><div class="nav-menu"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></button><div class="nav-links" id="primary-links" data-open="false"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#education">Education</a><a href="../index.html#contact">Contact</a></div><button class="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z" /></svg><span class="theme-label">Theme</span></button></div></nav></header>
     <main id="main">
-      <section class="project-hero">
-        <div class="container">
-          <a class="breadcrumb" href="../index.html#projects">← Back to projects</a>
-          <p class="eyebrow">Information Retrieval</p>
-          <h1>Information Retrieval with BM25</h1>
-          <p class="hero-subtitle">
-            A project focused on BM25 ranking and core information retrieval
-            techniques.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container project-layout">
-          <article class="project-body">
-            <h2>Project overview</h2>
-            <p>
-              This project explores information retrieval using BM25, a ranking
-              function commonly used to score how relevant documents are to a
-              search query.
-            </p>
-
-            <h2>Focus areas</h2>
-            <ul>
-              <li>Text preprocessing for search-style tasks.</li>
-              <li>Query handling and document scoring.</li>
-              <li>Understanding how BM25 balances term frequency and document length.</li>
-              <li>Presenting retrieval results clearly without overstating performance.</li>
-            </ul>
-
-            <h2>Status</h2>
-            <p>
-              This project page is ready for more implementation notes, source
-              links or screenshots once you choose what you want to publish.
-            </p>
-          </article>
-
-          <aside class="project-sidebar" aria-label="Project details">
-            <h2>Skills used</h2>
-            <ul class="tag-list">
-              <li>Python</li>
-              <li>information retrieval</li>
-              <li>BM25</li>
-              <li>Jupyter</li>
-              <li>GitHub</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year">2026</span> Aaron Gulzar.</p>
-        <a href="../index.html#projects">Back to projects</a>
+      <header class="project-hero"><div class="container"><a class="breadcrumb" href="../index.html#projects">← All projects</a><p class="eyebrow">Information Retrieval · Search</p><h1>Information Retrieval</h1><p class="hero-intro">A search-ranking project exploring BM25 scoring, text preprocessing and the mechanics of matching queries to relevant documents.</p><ul class="project-hero-meta" aria-label="Project summary"><li><strong>Status</strong>Complete</li><li><strong>Context</strong>University work</li><li><strong>Method</strong>BM25</li><li><strong>Primary language</strong>Python</li></ul></div></header>
+      <div class="container project-content">
+        <section class="project-section"><div class="project-section-label"><p class="eyebrow">01</p><h2>Overview</h2></div><div class="project-section-body"><p class="project-lead">The project examines how a retrieval system turns a natural-language query into a ranked list of documents.</p><p>BM25 provides the core ranking function, balancing term frequency, inverse document frequency and document-length normalisation. The work focuses on building the retrieval pipeline clearly and interpreting why particular documents receive higher scores.</p></div></section>
+        <section class="project-section"><div class="project-section-label"><p class="eyebrow">02</p><h2>Technologies</h2></div><div class="project-section-body"><ul class="tag-list" aria-label="Project technologies"><li>Python</li><li>BM25</li><li>Information retrieval</li><li>Text preprocessing</li><li>Jupyter Notebook</li><li>Git</li></ul></div></section>
+        <section class="project-section"><div class="project-section-label"><p class="eyebrow">03</p><h2>Key Results</h2></div><div class="project-section-body"><div class="result-grid"><article class="result-card"><span class="result-value">BM25</span><h3>Ranking model</h3><p>Term relevance adjusted for corpus rarity and document length.</p></article><article class="result-card"><span class="result-value">End-to-end</span><h3>Retrieval flow</h3><p>Queries are processed, scored against documents and returned in rank order.</p></article><article class="result-card"><span class="result-value">Interpretable</span><h3>Scoring</h3><p>The contribution of matched terms can be examined directly.</p></article></div></div></section>
+        <section class="project-section"><div class="project-section-label"><p class="eyebrow">04</p><h2>Architecture</h2></div><div class="project-section-body"><p>The pipeline separates text preparation, index statistics, query scoring and result presentation so each stage can be tested and reasoned about independently.</p><div class="architecture-flow" aria-label="Information retrieval pipeline"><div class="architecture-step">Document corpus</div><div class="architecture-step">Preprocessing</div><div class="architecture-step">Corpus statistics</div><div class="architecture-step">BM25 scoring</div><div class="architecture-step">Ranked results</div></div></div></section>
+        <section class="project-section"><div class="project-section-label"><p class="eyebrow">05</p><h2>Visuals</h2></div><div class="project-section-body"><div class="visual-placeholder"><div><strong>Query → score → rank</strong><p>The architecture view above documents the published project flow. No unsupported screenshots or evaluation charts have been added.</p></div></div></div></section>
+        <section class="project-section"><div class="project-section-label"><p class="eyebrow">06</p><h2>Challenges</h2></div><div class="project-section-body"><div class="note-grid"><article class="note-card"><h3>Text consistency</h3><p>Applying the same tokenisation and normalisation decisions to documents and queries.</p></article><article class="note-card"><h3>Ranking behaviour</h3><p>Understanding the interaction between term frequency, rarity and document length.</p></article><article class="note-card"><h3>Edge cases</h3><p>Handling unmatched query terms and documents with limited useful content.</p></article><article class="note-card"><h3>Responsible claims</h3><p>Avoiding effectiveness statistics until a documented evaluation set is available.</p></article></div></div></section>
+        <section class="project-section"><div class="project-section-label"><p class="eyebrow">07</p><h2>What I Learned</h2></div><div class="project-section-body"><ul class="learning-list"><li>How corpus-level statistics influence relevance ranking.</li><li>Why preprocessing choices are part of the retrieval model, not a separate detail.</li><li>How to structure a search pipeline into testable stages.</li><li>Why retrieval quality requires explicit relevance judgements and evaluation metrics.</li></ul></div></section>
+        <section class="project-section"><div class="project-section-label"><p class="eyebrow">08</p><h2>Repository Links</h2></div><div class="project-section-body"><div class="repository-box"><p>A public repository URL has not been provided for this project.</p><span class="button button-disabled" aria-disabled="true">Repository unavailable</span></div></div></section>
       </div>
-    </footer>
+      <nav class="project-pagination" aria-label="Project pagination"><a href="cnn-image-classification.html"><span>Previous project</span><strong>Deep Learning Image Classification</strong></a><a href="disease-prediction.html"><span>Next project</span><strong>Disease Prediction</strong></a></nav>
+    </main>
+    <footer class="site-footer"><div class="container"><div class="footer-main"><p><strong>Aaron Gulzar</strong><br /><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p><div class="footer-links" aria-label="Footer links"><a class="footer-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">GitHub</a><span class="footer-link link-unavailable" aria-disabled="true">LinkedIn unavailable</span><a class="footer-link" href="mailto:aarongulzar@hotmail.com">Email</a></div></div><div class="footer-meta"><span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span></div></div></footer>
   </body>
 </html>
