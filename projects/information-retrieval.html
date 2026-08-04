@@ -104,10 +104,21 @@
           <p class="hero-intro">A retrieval system for financial question answering that compares lexical BM25, tuned BM25 and dense semantic search with Sentence-BERT and exact FAISS indexing.</p>
           <ul class="project-hero-meta" aria-label="Project summary">
             <li><strong>Status</strong>Complete</li>
+            <li><strong>Project type</strong>University group project</li>
+            <li><strong>Team size</strong>4</li>
             <li><strong>Benchmark</strong>BEIR FiQA-2018</li>
-            <li><strong>Corpus</strong>57,638 passages</li>
-            <li><strong>Primary language</strong>Python</li>
           </ul>
+          <aside class="note-card" aria-labelledby="personal-role-heading">
+            <h3 id="personal-role-heading">My role</h3>
+            <ul class="learning-list">
+              <li>Designed the evaluation methodology.</li>
+              <li>Defined the experimental framework.</li>
+              <li>Performed BM25 parameter tuning analysis.</li>
+              <li>Analysed retrieval performance.</li>
+              <li>Interpreted and documented the results.</li>
+              <li>Coordinated project milestones.</li>
+            </ul>
+          </aside>
           <div class="button-row">
             <a class="button button-primary" href="https://github.com/aarongulzar/information-retrieval" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
             <a class="button button-secondary" href="https://github.com/aarongulzar/information-retrieval/blob/main/reports/presentation.pdf" target="_blank" rel="noopener noreferrer">View Presentation</a>
@@ -120,6 +131,8 @@
           <div class="project-section-label"><p class="eyebrow">01</p><h2>Overview</h2></div>
           <div class="project-section-body">
             <p class="project-lead">The project tests whether dense semantic retrieval can improve financial question answering when queries and relevant passages use different vocabulary.</p>
+            <p>This project was completed as part of a four-person university group. My primary contribution focused on evaluation design, experimental methodology, BM25 parameter tuning analysis, results interpretation, and project coordination.</p>
+            <p>The team built the complete system documented here. The technical sections describe that shared work; the project information above distinguishes my individual contribution.</p>
             <p>Three systems are evaluated on the same FiQA-2018 test queries and relevance judgements: a BM25 baseline, an optimised BM25 configuration and an SBERT dense retriever backed by exact FAISS search. Both retrieval branches return the top 100 documents per query and are evaluated independently rather than fused.</p>
             <p>The notebook preserves the complete implementation, tuning outputs, model comparisons and an interactive search interface.</p>
           </div>
