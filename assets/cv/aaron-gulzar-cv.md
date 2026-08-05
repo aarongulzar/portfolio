@@ -2,7 +2,7 @@
 
 Email: aarongulzar@hotmail.com  
 GitHub: https://github.com/aarongulzar  
-LinkedIn: add your profile URL
+LinkedIn: <a href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">linkedin.com/in/aaron-gulzar-b1b613243</a>
 
 ## Profile
 

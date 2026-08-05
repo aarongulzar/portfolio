@@ -83,6 +83,6 @@ portfolio/
 
 ## Updating content
 
-- Replace the LinkedIn placeholder in `index.html` with your final LinkedIn URL.
+- LinkedIn: <a href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">linkedin.com/in/aaron-gulzar-b1b613243</a>
 - Update `assets/cv/aaron-gulzar-cv.md` or replace it with a PDF when your CV is ready.
 - Add project links, screenshots or implementation notes only when you want to publish them.
