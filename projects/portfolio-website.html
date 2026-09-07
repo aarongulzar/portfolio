@@ -1,27 +1,153 @@
 <!doctype html>
 <html lang="en">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="Engineering case study for Aaron Gulzar's accessible static portfolio website." /><meta name="theme-color" content="#0f172a" /><title>Portfolio Website | Aaron Gulzar</title><link rel="stylesheet" href="../style.css" /><script src="../script.js" defer></script></head>
-  <body>
+  <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Engineering case study for Aaron Gulzar's accessible static portfolio website.">
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("aaron-gulzar-portfolio-theme");document.documentElement.dataset.theme=t==="light"||t==="dark"?t:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}catch(e){document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}</script><meta name="theme-color" content="#f9f8f5">
+<title>Portfolio Website | Aaron Gulzar</title>
+<link rel="stylesheet" href="../style.css?v=91041ae2e578">
+<script src="../script.js?v=0d115876df13" defer></script>
+<link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+  <body class="case-study">
     <a class="skip-link" href="#main">Skip to main content</a>
-    <header class="site-header"><nav class="nav container" aria-label="Primary navigation"><a class="brand" href="../index.html" aria-label="Aaron Gulzar home"><span class="brand-mark" aria-hidden="true">AG</span><span>Aaron Gulzar</span></a><div class="nav-menu"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></button><div class="nav-links" id="primary-links" data-open="false"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#education">Education</a><a href="../index.html#contact">Contact</a></div><button class="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z" /></svg><span class="theme-label">Theme</span></button></div></nav></header>
+    <header class="site-header"><nav class="nav container" aria-label="Primary navigation"><a class="brand" href="../index.html" aria-label="Aaron Gulzar home"><span class="brand-mark" aria-hidden="true">AG</span><span>Aaron Gulzar</span></a><div class="nav-menu">
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation menu"><svg viewbox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button><div class="nav-links" id="primary-links" data-open="false">
+<a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#education">Education</a><a href="../index.html#experience">Experience</a><a href="../index.html#contact">Contact</a><a href="../assets/cv/aaron-gulzar-cv.md" download="" class="nav-cv">CV ↓</a>
+</div>
+<button class="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"></path></svg><span class="theme-label">Theme</span></button>
+</div></nav></header>
     <main id="main">
-      <header class="project-hero"><div class="container"><a class="breadcrumb" href="../index.html#projects">← All projects</a><p class="eyebrow">Web Engineering · Accessibility</p><h1>Portfolio Website</h1><p class="hero-intro">A fast, responsive static site designed to present technical work clearly without a frontend framework or runtime dependency.</p><ul class="project-hero-meta" aria-label="Project summary"><li><strong>Status</strong>Complete</li><li><strong>Delivery</strong>GitHub Pages</li><li><strong>Pages</strong>Homepage + projects</li><li><strong>Dependencies</strong>None</li></ul><div class="button-row"><a class="button button-primary" href="https://github.com/aarongulzar/portfolio" target="_blank" rel="noopener noreferrer">View GitHub Repository</a><a class="button button-secondary" href="../index.html">View Homepage</a></div></div></header>
+      <header class="project-hero"><div class="container">
+<a class="breadcrumb" href="../index.html#projects">← All projects</a><p class="eyebrow">Web Engineering · Accessibility</p>
+<div class="project-title-grid">
+<h1>Portfolio Website</h1>
+<p class="hero-intro">A fast, responsive static site designed to present technical work clearly without a frontend framework or runtime dependency.</p>
+</div>
+<ul class="project-hero-meta" aria-label="Project summary">
+<li>
+<strong>Status</strong>Complete</li>
+<li>
+<strong>Delivery</strong>GitHub Pages</li>
+<li>
+<strong>Pages</strong>Homepage + projects</li>
+<li>
+<strong>Dependencies</strong>None</li>
+</ul>
+<div class="button-row">
+<a class="button button-primary" href="https://github.com/aarongulzar/portfolio" target="_blank" rel="noopener noreferrer">View GitHub Repository</a><a class="button button-secondary" href="../index.html">View Homepage</a>
+</div>
+</div></header>
       <div class="container project-content">
-        <section class="project-section"><div class="project-section-label"><p class="eyebrow">01</p><h2>Overview</h2></div><div class="project-section-body"><p class="project-lead">The website treats project evidence, readable content and accessible navigation as the core product.</p><p>It is built with semantic HTML, a shared responsive CSS design system and a small JavaScript enhancement for theme and mobile navigation. Relative links preserve compatibility with the repository's GitHub Pages subpath, while the site remains usable with JavaScript unavailable.</p></div></section>
-        <section class="project-section"><div class="project-section-label"><p class="eyebrow">02</p><h2>Technologies</h2></div><div class="project-section-body"><ul class="tag-list" aria-label="Project technologies"><li>HTML5</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>GitHub Pages</li><li>Responsive design</li><li>Accessibility</li></ul></div></section>
-        <section class="project-section"><div class="project-section-label"><p class="eyebrow">03</p><h2>Key Results</h2></div><div class="project-section-body"><div class="result-grid"><article class="result-card"><span class="result-value">0</span><h3>Frontend dependencies</h3><p>No framework, package manager or client-side library is required.</p></article><article class="result-card"><span class="result-value">2 themes</span><h3>Colour modes</h3><p>Light and dark palettes preserve the same content hierarchy.</p></article><article class="result-card"><span class="result-value">6 projects</span><h3>Case-study routes</h3><p>Consistent pages connect technical detail with clear navigation.</p></article></div></div></section>
-        <section class="project-section"><div class="project-section-label"><p class="eyebrow">04</p><h2>Architecture</h2></div><div class="project-section-body"><p>A small shared surface keeps maintenance straightforward: content lives in semantic pages, presentation in one stylesheet and progressive behaviour in one script.</p><div class="architecture-flow" aria-label="Portfolio architecture"><div class="architecture-step">Semantic HTML</div><div class="architecture-step">Shared CSS tokens</div><div class="architecture-step">Progressive JavaScript</div><div class="architecture-step">Static assets</div><div class="architecture-step">GitHub Pages</div></div></div></section>
-        <section class="project-section"><div class="project-section-label"><p class="eyebrow">05</p><h2>Visuals</h2></div><div class="project-section-body"><div class="visual-placeholder"><pre class="preview-code" aria-label="Semantic HTML example"><span class="code-keyword">&lt;main&gt;</span>
+        <aside aria-label="Case study contents" class="case-index"><p class="eyebrow">In this project</p>
+<nav aria-label="On this page"><ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#technologies">Technologies</a></li>
+<li><a href="#key-results">Key Results</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#visuals">Visuals</a></li>
+<li><a href="#challenges">Challenges</a></li>
+<li><a href="#what-i-learned">What I Learned</a></li>
+<li><a href="#repository-links">Repository Links</a></li>
+</ol></nav></aside><div class="case-body">
+<section class="project-section" id="overview"><div class="project-section-label">
+<p class="eyebrow">01</p>
+<h2>Overview</h2>
+</div>
+<div class="project-section-body">
+<p class="project-lead">The website treats project evidence, readable content and accessible navigation as the core product.</p>
+<p>It is built with semantic HTML, a shared responsive CSS design system and a small JavaScript enhancement for theme and mobile navigation. Relative links preserve compatibility with the repository's GitHub Pages subpath, while the site remains usable with JavaScript unavailable.</p>
+</div></section>
+        <section class="project-section" id="technologies"><div class="project-section-label">
+<p class="eyebrow">02</p>
+<h2>Technologies</h2>
+</div>
+<div class="project-section-body"><ul class="tag-list" aria-label="Project technologies">
+<li>HTML5</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Git</li>
+<li>GitHub Pages</li>
+<li>Responsive design</li>
+<li>Accessibility</li>
+</ul></div></section>
+        <section class="project-section" id="key-results"><div class="project-section-label">
+<p class="eyebrow">03</p>
+<h2>Key Results</h2>
+</div>
+<div class="project-section-body"><div class="result-grid">
+<article class="result-card"><span class="result-value">0</span><h3>Frontend dependencies</h3>
+<p>No framework, package manager or client-side library is required.</p></article><article class="result-card"><span class="result-value">2 themes</span><h3>Colour modes</h3>
+<p>Light and dark palettes preserve the same content hierarchy.</p></article><article class="result-card"><span class="result-value">6 projects</span><h3>Case-study routes</h3>
+<p>Consistent pages connect technical detail with clear navigation.</p></article>
+</div></div></section>
+        <section class="project-section" id="architecture"><div class="project-section-label">
+<p class="eyebrow">04</p>
+<h2>Architecture</h2>
+</div>
+<div class="project-section-body">
+<p>A small shared surface keeps maintenance straightforward: content lives in semantic pages, presentation in one stylesheet and progressive behaviour in one script.</p>
+<div class="architecture-flow" aria-label="Portfolio architecture">
+<div class="architecture-step">Semantic HTML</div>
+<div class="architecture-step">Shared CSS tokens</div>
+<div class="architecture-step">Progressive JavaScript</div>
+<div class="architecture-step">Static assets</div>
+<div class="architecture-step">GitHub Pages</div>
+</div>
+</div></section>
+        <section class="project-section" id="visuals"><div class="project-section-label">
+<p class="eyebrow">05</p>
+<h2>Visuals</h2>
+</div>
+<div class="project-section-body"><div class="visual-placeholder"><pre class="preview-code" aria-label="Semantic HTML example"><span class="code-keyword">&lt;main&gt;</span>
   &lt;section aria-labelledby="projects-heading"&gt;
     Evidence-led project presentation
   &lt;/section&gt;
 <span class="code-keyword">&lt;/main&gt;</span></pre></div></div></section>
-        <section class="project-section"><div class="project-section-label"><p class="eyebrow">06</p><h2>Challenges</h2></div><div class="project-section-body"><div class="note-grid"><article class="note-card"><h3>Content consistency</h3><p>Six different projects need one hierarchy without erasing their differences.</p></article><article class="note-card"><h3>Responsive density</h3><p>Project evidence and controls must remain readable on small screens.</p></article><article class="note-card"><h3>Theme parity</h3><p>Both palettes need sufficient contrast and equivalent visual emphasis.</p></article><article class="note-card"><h3>Honest presentation</h3><p>Unavailable links and incomplete results must remain explicit rather than implied.</p></article></div></div></section>
-        <section class="project-section"><div class="project-section-label"><p class="eyebrow">07</p><h2>What I Learned</h2></div><div class="project-section-body"><ul class="learning-list"><li>How a token-based CSS system reduces inconsistency across a multi-page static site.</li><li>Why semantic structure and visible focus states are core interface requirements.</li><li>How progressive enhancement keeps essential navigation independent of JavaScript.</li><li>Why concise evidence and explicit limitations improve technical credibility.</li></ul></div></section>
-        <section class="project-section"><div class="project-section-label"><p class="eyebrow">08</p><h2>Repository Links</h2></div><div class="project-section-body"><div class="repository-box"><p>The public repository contains the complete static site, shared assets and deployment documentation.</p><a class="button button-primary" href="https://github.com/aarongulzar/portfolio" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div></div></section>
+        <section class="project-section" id="challenges"><div class="project-section-label">
+<p class="eyebrow">06</p>
+<h2>Challenges</h2>
+</div>
+<div class="project-section-body"><div class="note-grid">
+<article class="note-card"><h3>Content consistency</h3>
+<p>Six different projects need one hierarchy without erasing their differences.</p></article><article class="note-card"><h3>Responsive density</h3>
+<p>Project evidence and controls must remain readable on small screens.</p></article><article class="note-card"><h3>Theme parity</h3>
+<p>Both palettes need sufficient contrast and equivalent visual emphasis.</p></article><article class="note-card"><h3>Honest presentation</h3>
+<p>Unavailable links and incomplete results must remain explicit rather than implied.</p></article>
+</div></div></section>
+        <section class="project-section" id="what-i-learned"><div class="project-section-label">
+<p class="eyebrow">07</p>
+<h2>What I Learned</h2>
+</div>
+<div class="project-section-body"><ul class="learning-list">
+<li>How a token-based CSS system reduces inconsistency across a multi-page static site.</li>
+<li>Why semantic structure and visible focus states are core interface requirements.</li>
+<li>How progressive enhancement keeps essential navigation independent of JavaScript.</li>
+<li>Why concise evidence and explicit limitations improve technical credibility.</li>
+</ul></div></section>
+        <section class="project-section" id="repository-links"><div class="project-section-label">
+<p class="eyebrow">08</p>
+<h2>Repository Links</h2>
+</div>
+<div class="project-section-body"><div class="repository-box">
+<p>The public repository contains the complete static site, shared assets and deployment documentation.</p>
+<a class="button button-primary" href="https://github.com/aarongulzar/portfolio" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+</div></div></section>
       </div>
+</div>
       <nav class="project-pagination" aria-label="Project pagination"><a href="tradingview-indicator-suite.html"><span>Previous project</span><strong>TradingView Indicator Suite</strong></a><a href="cnn-image-classification.html"><span>Next project</span><strong>Deep Learning Image Classification</strong></a></nav>
     </main>
-    <footer class="site-footer"><div class="container"><div class="footer-main"><p><strong>Aaron Gulzar</strong><br /><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p><div class="footer-links" aria-label="Footer links"><a class="footer-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">GitHub</a><a class="footer-link" href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="footer-link" href="mailto:aarongulzar@hotmail.com">Email</a></div></div><div class="footer-meta"><span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span></div></div></footer>
+    <footer class="site-footer"><div class="container">
+<div class="footer-main">
+<p><strong>Aaron Gulzar</strong><br><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p>
+<div class="footer-links" aria-label="Footer links">
+<a class="footer-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">GitHub</a><a class="footer-link" href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="footer-link" href="mailto:aarongulzar@hotmail.com">Email</a>
+</div>
+</div>
+<div class="footer-meta">
+<span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span>
+</div>
+</div></footer>
   </body>
 </html>

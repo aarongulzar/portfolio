@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Aaron Gulzar, an MSc Data Science student building machine-learning, data and software-engineering projects." />
-    <meta name="theme-color" content="#0f172a" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Aaron Gulzar, an MSc Data Science student building machine-learning, data and software-engineering projects.">
+    <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("aaron-gulzar-portfolio-theme");document.documentElement.dataset.theme=t==="light"||t==="dark"?t:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}catch(e){document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}</script><meta name="theme-color" content="#f9f8f5">
     <title>Aaron Gulzar | Machine Learning &amp; Data Science</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css?v=91041ae2e578">
+    <script src="script.js?v=0d115876df13" defer></script>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+  <body class="home-page">
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
@@ -20,7 +21,7 @@
         </a>
         <div class="nav-menu">
           <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation menu">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+            <svg viewbox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
           </button>
           <div class="nav-links" id="primary-links" data-open="false">
             <a href="#projects">Projects</a>
@@ -29,9 +30,10 @@
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
-          </div>
+          <a href="assets/cv/aaron-gulzar-cv.md" download="" class="nav-cv">CV ↓</a>
+</div>
           <button class="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z" /></svg>
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"></path></svg>
             <span class="theme-label">Theme</span>
           </button>
         </div>
@@ -40,29 +42,33 @@
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">Graduate portfolio</p>
-            <h1 id="hero-title">Aaron Gulzar</h1>
+        <div class="container">
+          <div class="hero-masthead">
+<p class="eyebrow">Graduate portfolio</p>
+            <h1 id="hero-title">Aaron <span>Gulzar</span>
+</h1>
             <p class="hero-title-note">MSc Data Science, Queen Mary University of London</p>
-            <p class="hero-specialisms">Machine Learning&nbsp; • &nbsp;Data Science&nbsp; • &nbsp;Software Engineering</p>
+            </div>
+<div class="hero-grid">
+<div class="hero-copy">
+<p class="hero-specialisms"><span>Machine Learning</span><span>Data Science</span><span>Software Engineering</span></p>
             <p class="hero-intro">
               I build and evaluate practical machine-learning systems, with work spanning computer vision, information retrieval and software development. My approach combines scientific rigour with clear, maintainable implementation.
             </p>
             <div class="button-row" aria-label="Portfolio actions">
               <a class="button button-primary" href="#projects">View Projects</a>
               <a class="button button-secondary" href="assets/cv/aaron-gulzar-cv.md" download>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14" /></svg>
+                <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14"></path></svg>
                 Download CV
               </a>
               <a class="button button-secondary" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.5 1.4-4.5-2.5-6-3m12 6v-3.9c0-1.1.1-1.6-.5-2.3 2.8-.3 5.7-1.4 5.7-6.2A4.8 4.8 0 0 0 19 6.3a4.5 4.5 0 0 0-.1-3.3S17.8 2.7 15 4.3a11.4 11.4 0 0 0-6 0C6.2 2.7 5.1 3 5.1 3A4.5 4.5 0 0 0 5 6.3a4.8 4.8 0 0 0-1.2 3.3c0 4.8 2.9 5.9 5.7 6.2-.6.7-.6 1.4-.5 2.3V22" /></svg>
+                <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.5 1.4-4.5-2.5-6-3m12 6v-3.9c0-1.1.1-1.6-.5-2.3 2.8-.3 5.7-1.4 5.7-6.2A4.8 4.8 0 0 0 19 6.3a4.5 4.5 0 0 0-.1-3.3S17.8 2.7 15 4.3a11.4 11.4 0 0 0-6 0C6.2 2.7 5.1 3 5.1 3A4.5 4.5 0 0 0 5 6.3a4.8 4.8 0 0 0-1.2 3.3c0 4.8 2.9 5.9 5.7 6.2-.6.7-.6 1.4-.5 2.3V22"></path></svg>
                 GitHub
               </a>
               <a class="button button-secondary" href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
           </div>
-          <aside class="hero-summary" aria-label="Professional summary">
+<aside class="hero-summary" aria-label="Professional summary">
             <dl>
               <div>
                 <dt>Current study</dt>
@@ -83,138 +89,195 @@
             </dl>
           </aside>
         </div>
+</div>
       </section>
 
-      <section class="section section-muted" id="projects" aria-labelledby="projects-heading">
+      <section class="section section-muted" id="projects" aria-labelledby="projects-heading" data-section-number="01">
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">Featured Projects</p>
+              <p class="eyebrow"><span class="section-number">01 / </span>Featured Projects</p>
               <h2 id="projects-heading">Technical work, presented with evidence.</h2>
             </div>
             <p>Academic experiments and software projects with transparent status, methods and limitations. Exact metrics are shown only where preserved results support them.</p>
           </div>
 
           <div class="project-grid">
-            <article class="project-card">
-              <div class="project-preview">
-                <img src="assets/projects/deep-learning/cifar10_network_overview.svg" alt="Architecture preview of the CIFAR-10 convolutional network" width="1200" height="565" />
-              </div>
+            <article class="project-card" data-project-number="01">
               <div class="project-card-body">
-                <div class="card-meta"><span class="status status-complete">Complete</span><span class="project-type">Deep Learning</span></div>
-                <h3>Deep Learning Image Classification</h3>
+                <div class="card-meta">
+<span class="status status-complete">Complete</span><span class="project-type">Deep Learning</span>
+</div>
+                <h3><a href="projects/cnn-image-classification.html">Deep Learning Image Classification</a></h3>
                 <p class="project-description">A custom CIFAR-10 architecture and controlled Fashion-MNIST ablation study implemented in PyTorch.</p>
-                <ul class="tag-list" aria-label="Technologies"><li>Python</li><li>PyTorch</li><li>torchvision</li><li>Matplotlib</li></ul>
-                <div class="metric"><span class="metric-label">Best CIFAR-10 test accuracy</span><strong class="metric-value">87.81%</strong></div>
+                <ul class="tag-list" aria-label="Technologies">
+<li>Python</li>
+<li>PyTorch</li>
+<li>torchvision</li>
+<li>Matplotlib</li>
+</ul>
+                <div class="metric">
+<span class="metric-label">Best CIFAR-10 test accuracy</span><strong class="metric-value">87.81%</strong>
+</div>
                 <div class="card-actions">
                   <a class="button button-primary" href="projects/cnn-image-classification.html">View Project</a>
                   <a class="button button-secondary" href="https://github.com/aarongulzar/deep-learning-image-classification" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
                 </div>
               </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-preview" aria-hidden="true">
-                <div class="preview-system"><span class="preview-node">Query</span><span class="preview-arrow">→</span><span class="preview-node preview-node-accent">BM25</span><span class="preview-arrow">→</span><span class="preview-node">Ranked docs</span></div>
+            <div class="project-preview">
+                <span class="figure-label">Project 01</span><img src="assets/projects/deep-learning/cifar10_network_overview.svg" alt="Architecture preview of the CIFAR-10 convolutional network" width="1200" height="610" decoding="async">
               </div>
+              </article>
+
+            <article class="project-card" data-project-number="02">
               <div class="project-card-body">
-                <div class="card-meta"><span class="status status-complete">Complete</span><span class="project-type">Information Retrieval</span></div>
-                <h3>Information Retrieval</h3>
+                <div class="card-meta">
+<span class="status status-complete">Complete</span><span class="project-type">Information Retrieval</span>
+</div>
+                <h3><a href="projects/information-retrieval.html">Information Retrieval</a></h3>
                 <p class="project-description">A search-ranking project exploring BM25 scoring, text preprocessing and interpretable retrieval results.</p>
-                <ul class="tag-list" aria-label="Technologies"><li>Python</li><li>BM25</li><li>Jupyter</li><li>Text processing</li></ul>
-                <div class="metric"><span class="metric-label">Core ranking method</span><strong class="metric-value">BM25</strong></div>
+                <ul class="tag-list" aria-label="Technologies">
+<li>Python</li>
+<li>BM25</li>
+<li>Jupyter</li>
+<li>Text processing</li>
+</ul>
+                <div class="metric">
+<span class="metric-label">Core ranking method</span><strong class="metric-value">BM25</strong>
+</div>
                 <div class="card-actions">
                   <a class="button button-primary" href="projects/information-retrieval.html">View Project</a>
                   <span class="button button-disabled" aria-disabled="true">GitHub Repository unavailable</span>
                 </div>
               </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-preview" aria-hidden="true">
-                <div class="preview-system"><span class="preview-node">Clinical data</span><span class="preview-arrow">→</span><span class="preview-node preview-node-accent">ML pipeline</span><span class="preview-arrow">→</span><span class="preview-node">Evaluation</span></div>
+            <div class="project-preview" aria-hidden="true">
+                <span class="figure-label">Project 02</span><div class="preview-system">
+<span class="preview-node">Query</span><span class="preview-arrow">→</span><span class="preview-node preview-node-accent">BM25</span><span class="preview-arrow">→</span><span class="preview-node">Ranked docs</span>
+</div>
               </div>
+              </article>
+
+            <article class="project-card" data-project-number="03">
               <div class="project-card-body">
-                <div class="card-meta"><span class="status status-progress">In Progress</span><span class="project-type">Machine Learning</span></div>
-                <h3>Disease Prediction using Machine Learning</h3>
-                <p class="project-description">An in-progress classification project centred on careful preprocessing, model comparison and responsible evaluation.</p>
-                <ul class="tag-list" aria-label="Technologies"><li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li></ul>
-                <div class="metric"><span class="metric-label">Current phase</span><strong class="metric-value">Development</strong></div>
+                <div class="card-meta">
+<span class="status status-complete">Complete</span><span class="project-type">Reliable Machine Learning</span>
+</div>
+                <h3><a href="projects/disease-prediction.html">Heart-Disease Model Transportability Audit</a></h3>
+                <p class="project-description">A reproducible test of whether internally strong classifiers retain discrimination and calibrated probabilities across geographic sites.</p>
+                <ul class="tag-list" aria-label="Technologies">
+<li>Python</li>
+<li>scikit-learn</li>
+<li>Nested CV</li>
+<li>Bootstrap inference</li>
+</ul>
+                <div class="metric">
+<span class="metric-label">Release quality control</span><strong class="metric-value">89/89 passed</strong>
+</div>
                 <div class="card-actions">
                   <a class="button button-primary" href="projects/disease-prediction.html">View Project</a>
-                  <span class="button button-disabled" aria-disabled="true">GitHub Repository unavailable</span>
+                  <a class="button button-secondary" href="https://github.com/aarongulzar/heart-disease-transportability-audit" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
                 </div>
               </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-preview">
-                <pre class="preview-code" aria-label="Lua code preview"><span class="code-keyword">local</span> habitat = Zoo:CreateHabitat()
-habitat:AddAnimal(animal)
-economy:UpdateRevenue()
-player:UnlockExpansion()</pre>
+            <div class="project-preview">
+                <span class="figure-label">Project 03</span><img src="assets/projects/heart-disease/figure1_study_workflow.png" alt="Workflow from Cleveland model development to frozen evaluation across three external heart-disease cohorts" loading="lazy" width="2733" height="1168" decoding="async">
               </div>
+              </article>
+
+            <article class="project-card" data-project-number="04">
               <div class="project-card-body">
-                <div class="card-meta"><span class="status status-progress">In Progress</span><span class="project-type">Game Development</span></div>
-                <h3>Stud Safari</h3>
+                <div class="card-meta">
+<span class="status status-progress">In Progress</span><span class="project-type">Game Development</span>
+</div>
+                <h3><a href="projects/stud-safari.html">Stud Safari</a></h3>
                 <p class="project-description">A Roblox zoo-management project focused on gameplay systems, Lua scripting and interactive design.</p>
-                <ul class="tag-list" aria-label="Technologies"><li>Lua</li><li>Roblox Studio</li><li>Git</li><li>VS Code</li></ul>
-                <div class="metric"><span class="metric-label">Engineering focus</span><strong class="metric-value">Game systems</strong></div>
+                <ul class="tag-list" aria-label="Technologies">
+<li>Lua</li>
+<li>Roblox Studio</li>
+<li>Git</li>
+<li>VS Code</li>
+</ul>
+                <div class="metric">
+<span class="metric-label">Engineering focus</span><strong class="metric-value">Game systems</strong>
+</div>
                 <div class="card-actions">
                   <a class="button button-primary" href="projects/stud-safari.html">View Project</a>
                   <span class="button button-disabled" aria-disabled="true">GitHub Repository unavailable</span>
                 </div>
               </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-preview">
-                <pre class="preview-code" aria-label="Pine Script code preview"><span class="code-keyword">indicator</span>("Signal Suite", overlay=true)
-trend = ta.ema(close, length)
-signal = ta.crossover(close, trend)
-plot(trend)</pre>
+            <div class="project-preview">
+                <span class="figure-label">Project 04</span><pre class="preview-code" aria-label="Lua code preview"><span class="code-keyword">local</span> habitat = Zoo:CreateHabitat()
+habitat:AddAnimal(animal)
+economy:UpdateRevenue()
+player:UnlockExpansion()</pre>
               </div>
+              </article>
+
+            <article class="project-card" data-project-number="05">
               <div class="project-card-body">
-                <div class="card-meta"><span class="status status-progress">In Progress</span><span class="project-type">Quantitative Tools</span></div>
-                <h3>TradingView Indicator Suite</h3>
+                <div class="card-meta">
+<span class="status status-progress">In Progress</span><span class="project-type">Quantitative Tools</span>
+</div>
+                <h3><a href="projects/tradingview-indicator-suite.html">TradingView Indicator Suite</a></h3>
                 <p class="project-description">A developing suite of chart indicators organised around reusable signal logic and clear visual output.</p>
-                <ul class="tag-list" aria-label="Technologies"><li>Pine Script</li><li>TradingView</li><li>Technical analysis</li><li>Version control</li></ul>
-                <div class="metric"><span class="metric-label">Current phase</span><strong class="metric-value">Development</strong></div>
+                <ul class="tag-list" aria-label="Technologies">
+<li>Pine Script</li>
+<li>TradingView</li>
+<li>Technical analysis</li>
+<li>Version control</li>
+</ul>
+                <div class="metric">
+<span class="metric-label">Current phase</span><strong class="metric-value">Development</strong>
+</div>
                 <div class="card-actions">
                   <a class="button button-primary" href="projects/tradingview-indicator-suite.html">View Project</a>
                   <span class="button button-disabled" aria-disabled="true">GitHub Repository unavailable</span>
                 </div>
               </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-preview">
-                <pre class="preview-code" aria-label="Portfolio code preview"><span class="code-keyword">&lt;main&gt;</span>
-  &lt;section id="projects"&gt;
-    Semantic, responsive content
-  &lt;/section&gt;
-<span class="code-keyword">&lt;/main&gt;</span></pre>
+            <div class="project-preview">
+                <span class="figure-label">Project 05</span><pre class="preview-code" aria-label="Pine Script code preview"><span class="code-keyword">indicator</span>("Signal Suite", overlay=true)
+trend = ta.ema(close, length)
+signal = ta.crossover(close, trend)
+plot(trend)</pre>
               </div>
+              </article>
+
+            <article class="project-card" data-project-number="06">
               <div class="project-card-body">
-                <div class="card-meta"><span class="status status-complete">Complete</span><span class="project-type">Web Engineering</span></div>
-                <h3>Portfolio Website</h3>
+                <div class="card-meta">
+<span class="status status-complete">Complete</span><span class="project-type">Web Engineering</span>
+</div>
+                <h3><a href="projects/portfolio-website.html">Portfolio Website</a></h3>
                 <p class="project-description">A responsive, accessible static portfolio built without a framework or runtime dependencies.</p>
-                <ul class="tag-list" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
-                <div class="metric"><span class="metric-label">Frontend dependencies</span><strong class="metric-value">0</strong></div>
+                <ul class="tag-list" aria-label="Technologies">
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>GitHub Pages</li>
+</ul>
+                <div class="metric">
+<span class="metric-label">Frontend dependencies</span><strong class="metric-value">0</strong>
+</div>
                 <div class="card-actions">
                   <a class="button button-primary" href="projects/portfolio-website.html">View Project</a>
                   <a class="button button-secondary" href="https://github.com/aarongulzar/portfolio" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
                 </div>
               </div>
-            </article>
+            <div class="project-preview">
+                <span class="figure-label">Project 06</span><pre class="preview-code" aria-label="Portfolio code preview"><span class="code-keyword">&lt;main&gt;</span>
+  &lt;section id="projects"&gt;
+    Semantic, responsive content
+  &lt;/section&gt;
+<span class="code-keyword">&lt;/main&gt;</span></pre>
+              </div>
+              </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="about" aria-labelledby="about-heading">
+      <section class="section" id="about" aria-labelledby="about-heading" data-section-number="02">
         <div class="container about-grid">
           <div>
-            <p class="eyebrow">About</p>
+            <p class="eyebrow"><span class="section-number">02 / </span>About</p>
             <h2 id="about-heading">Scientific foundations, applied through engineering.</h2>
           </div>
           <div class="about-copy">
@@ -224,51 +287,114 @@ plot(trend)</pre>
         </div>
       </section>
 
-      <section class="section section-muted" id="skills" aria-labelledby="skills-heading">
+      <section class="section section-muted" id="skills" aria-labelledby="skills-heading" data-section-number="03">
         <div class="container">
           <div class="section-heading">
-            <div><p class="eyebrow">Skills</p><h2 id="skills-heading">Repository-backed technical skills.</h2></div>
+            <div>
+<p class="eyebrow"><span class="section-number">03 / </span>Skills</p>
+<h2 id="skills-heading">Repository-backed technical skills.</h2>
+</div>
             <p>Grouped by how they are used across university work and current repositories.</p>
           </div>
           <div class="skills-grid">
-            <article class="skill-card"><h3>Programming</h3><ul><li>Python</li><li>SQL</li><li>Lua</li><li>HTML, CSS &amp; JavaScript</li></ul></article>
-            <article class="skill-card"><h3>Machine Learning</h3><ul><li>PyTorch</li><li>scikit-learn</li><li>Convolutional neural networks</li><li>Model evaluation</li></ul></article>
-            <article class="skill-card"><h3>Data Science</h3><ul><li>pandas</li><li>NumPy</li><li>Matplotlib</li><li>Information retrieval</li></ul></article>
-            <article class="skill-card"><h3>Software Engineering</h3><ul><li>Git &amp; GitHub</li><li>Modular design</li><li>Responsive interfaces</li><li>Technical documentation</li></ul></article>
-            <article class="skill-card"><h3>Tools</h3><ul><li>Jupyter Notebook</li><li>Google Colab</li><li>VS Code</li><li>Roblox Studio</li></ul></article>
+            <article class="skill-card"><h3>Programming</h3>
+<ul>
+<li>Python</li>
+<li>SQL</li>
+<li>Lua</li>
+<li>HTML, CSS &amp; JavaScript</li>
+</ul></article>
+            <article class="skill-card"><h3>Machine Learning</h3>
+<ul>
+<li>PyTorch</li>
+<li>scikit-learn</li>
+<li>Convolutional neural networks</li>
+<li>Model evaluation</li>
+</ul></article>
+            <article class="skill-card"><h3>Data Science</h3>
+<ul>
+<li>pandas</li>
+<li>NumPy</li>
+<li>Matplotlib</li>
+<li>Information retrieval</li>
+</ul></article>
+            <article class="skill-card"><h3>Software Engineering</h3>
+<ul>
+<li>Git &amp; GitHub</li>
+<li>Modular design</li>
+<li>Responsive interfaces</li>
+<li>Technical documentation</li>
+</ul></article>
+            <article class="skill-card"><h3>Tools</h3>
+<ul>
+<li>Jupyter Notebook</li>
+<li>Google Colab</li>
+<li>VS Code</li>
+<li>Roblox Studio</li>
+</ul></article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="education" aria-labelledby="education-heading">
+      <section class="section" id="education" aria-labelledby="education-heading" data-section-number="04">
         <div class="container">
-          <div class="section-heading"><div><p class="eyebrow">Education</p><h2 id="education-heading">Academic background.</h2></div><p>Postgraduate data science training built on an undergraduate scientific education.</p></div>
+          <div class="section-heading">
+<div>
+<p class="eyebrow"><span class="section-number">04 / </span>Education</p>
+<h2 id="education-heading">Academic background.</h2>
+</div>
+<p>Postgraduate data science training built on an undergraduate scientific education.</p>
+</div>
           <div class="education-grid">
             <article class="education-card">
-              <header><div><p class="institution">Queen Mary University of London</p><h3>MSc Data Science</h3></div><span class="date">Expected Sep 2026</span></header>
+              <header><div>
+<p class="institution">Queen Mary University of London</p>
+<h3>MSc Data Science</h3>
+</div>
+<span class="date">Expected Sep 2026</span></header>
               <p>Postgraduate study focused on data science, machine learning and related computational methods.</p>
             </article>
             <article class="education-card">
-              <header><div><p class="institution">Sheffield Hallam University</p><h3>BSc (Hons) Biochemistry</h3></div><span class="date">Graduated 2025</span></header>
+              <header><div>
+<p class="institution">Sheffield Hallam University</p>
+<h3>BSc (Hons) Biochemistry</h3>
+</div>
+<span class="date">Graduated 2025</span></header>
               <p>A scientific foundation in biological systems, experimental reasoning and analytical interpretation.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section-muted" id="experience" aria-labelledby="experience-heading">
+      <section class="section section-muted" id="experience" aria-labelledby="experience-heading" data-section-number="05">
         <div class="container">
-          <div class="section-heading"><div><p class="eyebrow">Experience</p><h2 id="experience-heading">Work and community experience.</h2></div><p>Presented at the level currently supported by the available record.</p></div>
+          <div class="section-heading">
+<div>
+<p class="eyebrow"><span class="section-number">05 / </span>Experience</p>
+<h2 id="experience-heading">Work and community experience.</h2>
+</div>
+<p>Presented at the level currently supported by the available record.</p>
+</div>
           <div class="experience-grid">
-            <article class="experience-card"><header><div><p class="organisation">Tesco</p><h3>Retail Experience</h3></div></header><p>Customer-facing retail work in a team environment, requiring reliability, clear communication and attention to day-to-day operational responsibilities.</p></article>
-            <article class="experience-card"><header><div><p class="organisation">Community</p><h3>Volunteering</h3></div></header><p>Volunteering experience contributing time and support to community activity. Specific responsibilities and dates will be added once verified.</p></article>
+            <article class="experience-card"><header><div>
+<p class="organisation">Tesco</p>
+<h3>Retail Experience</h3>
+</div></header><p>Customer-facing retail work in a team environment, requiring reliability, clear communication and attention to day-to-day operational responsibilities.</p></article>
+            <article class="experience-card"><header><div>
+<p class="organisation">Community</p>
+<h3>Volunteering</h3>
+</div></header><p>Volunteering experience contributing time and support to community activity. Specific responsibilities and dates will be added once verified.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="contact" aria-labelledby="contact-heading">
+      <section class="section" id="contact" aria-labelledby="contact-heading" data-section-number="06">
         <div class="container contact-panel">
-          <div><p class="eyebrow">Contact</p><h2 id="contact-heading">Open to graduate machine-learning, data and software roles.</h2><p>For opportunities or project discussions, email is the most direct way to get in touch.</p></div>
+          <div>
+<p class="eyebrow"><span class="section-number">06 / </span>Contact</p>
+<h2 id="contact-heading">Open to graduate machine-learning, data and software roles.</h2>
+<p>For opportunities or project discussions, email is the most direct way to get in touch.</p>
+</div>
           <address>
             <a class="inline-link" href="mailto:aarongulzar@hotmail.com">aarongulzar@hotmail.com</a>
             <a class="inline-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">github.com/aarongulzar</a>
@@ -281,14 +407,16 @@ plot(trend)</pre>
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main">
-          <p><strong>Aaron Gulzar</strong><br /><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p>
+          <p><strong>Aaron Gulzar</strong><br><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p>
           <div class="footer-links" aria-label="Footer links">
             <a class="footer-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="footer-link" href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="footer-link" href="mailto:aarongulzar@hotmail.com">Email</a>
           </div>
         </div>
-        <div class="footer-meta"><span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span></div>
+        <div class="footer-meta">
+<span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span>
+</div>
       </div>
     </footer>
   </body>

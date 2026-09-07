@@ -1,73 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Financial information retrieval case study comparing BM25 and SBERT with FAISS on the BEIR FiQA-2018 benchmark." />
-    <meta name="theme-color" content="#0f172a" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Financial information retrieval case study comparing BM25 and SBERT with FAISS on the BEIR FiQA-2018 benchmark.">
+    <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("aaron-gulzar-portfolio-theme");document.documentElement.dataset.theme=t==="light"||t==="dark"?t:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}catch(e){document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}</script><meta name="theme-color" content="#f9f8f5">
     <title>Financial Information Retrieval | Aaron Gulzar</title>
-    <link rel="stylesheet" href="../style.css" />
-    <script src="../script.js" defer></script>
-    <style>
-      .table-scroll {
-        overflow-x: auto;
-        margin-top: 1.5rem;
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        background: var(--surface);
-        box-shadow: var(--shadow-sm);
-      }
-
-      .comparison-table {
-        width: 100%;
-        min-width: 680px;
-        border-collapse: collapse;
-        font-variant-numeric: tabular-nums;
-      }
-
-      .comparison-table th,
-      .comparison-table td {
-        padding: 0.9rem 1rem;
-        border-bottom: 1px solid var(--border);
-        text-align: right;
-      }
-
-      .comparison-table th:first-child,
-      .comparison-table td:first-child {
-        text-align: left;
-      }
-
-      .comparison-table thead th {
-        background: var(--surface-muted);
-        color: var(--text);
-        font-size: 0.78rem;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-
-      .comparison-table tbody th {
-        color: var(--text);
-      }
-
-      .comparison-table tbody tr:last-child th,
-      .comparison-table tbody tr:last-child td {
-        border-bottom: 0;
-      }
-
-      .comparison-table .best-result {
-        background: var(--accent-soft);
-        color: var(--accent-hover);
-        font-weight: 800;
-      }
-
-      .table-caption {
-        margin: 0.75rem 0 0;
-        color: var(--subtle);
-        font-size: 0.84rem;
-      }
-    </style>
-  </head>
-  <body>
+    <link rel="stylesheet" href="../style.css?v=91041ae2e578">
+    <script src="../script.js?v=0d115876df13" defer></script>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+  <body class="case-study">
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
@@ -78,17 +21,18 @@
         </a>
         <div class="nav-menu">
           <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation menu">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+            <svg viewbox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
           </button>
           <div class="nav-links" id="primary-links" data-open="false">
             <a href="../index.html#projects">Projects</a>
             <a href="../index.html#about">About</a>
             <a href="../index.html#skills">Skills</a>
             <a href="../index.html#education">Education</a>
-            <a href="../index.html#contact">Contact</a>
-          </div>
+            <a href="../index.html#experience">Experience</a><a href="../index.html#contact">Contact</a>
+          <a href="../assets/cv/aaron-gulzar-cv.md" download="" class="nav-cv">CV ↓</a>
+</div>
           <button class="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z" /></svg>
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"></path></svg>
             <span class="theme-label">Theme</span>
           </button>
         </div>
@@ -100,13 +44,19 @@
         <div class="container">
           <a class="breadcrumb" href="../index.html#projects">← All projects</a>
           <p class="eyebrow">Information Retrieval · Financial Search</p>
-          <h1>Financial Information Retrieval</h1>
+          <div class="project-title-grid">
+<h1>Financial Information Retrieval</h1>
           <p class="hero-intro">A retrieval system for financial question answering that compares lexical BM25, tuned BM25 and dense semantic search with Sentence-BERT and exact FAISS indexing.</p>
-          <ul class="project-hero-meta" aria-label="Project summary">
-            <li><strong>Status</strong>Complete</li>
-            <li><strong>Project type</strong>University group project</li>
-            <li><strong>Team size</strong>4</li>
-            <li><strong>Benchmark</strong>BEIR FiQA-2018</li>
+          </div>
+<ul class="project-hero-meta" aria-label="Project summary">
+            <li>
+<strong>Status</strong>Complete</li>
+            <li>
+<strong>Project type</strong>University group project</li>
+            <li>
+<strong>Team size</strong>4</li>
+            <li>
+<strong>Benchmark</strong>BEIR FiQA-2018</li>
           </ul>
           <aside class="note-card" aria-labelledby="personal-role-heading">
             <h3 id="personal-role-heading">My role</h3>
@@ -127,8 +77,27 @@
       </header>
 
       <div class="container project-content">
-        <section class="project-section" id="overview">
-          <div class="project-section-label"><p class="eyebrow">01</p><h2>Overview</h2></div>
+        <aside aria-label="Case study contents" class="case-index"><p class="eyebrow">In this project</p>
+<nav aria-label="On this page"><ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#technologies">Technologies</a></li>
+<li><a href="#key-results">Key Results</a></li>
+<li><a href="#dataset">Dataset</a></li>
+<li><a href="#retrieval-pipeline">Retrieval Pipeline</a></li>
+<li><a href="#bm25-optimisation">BM25 Optimisation</a></li>
+<li><a href="#dense-retrieval">Dense Retrieval with SBERT</a></li>
+<li><a href="#evaluation">Evaluation</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#interface">Interactive Search Interface</a></li>
+<li><a href="#challenges">Challenges</a></li>
+<li><a href="#learning">What I Learned</a></li>
+<li><a href="#repository">Repository Links</a></li>
+</ol></nav></aside><div class="case-body">
+<section class="project-section" id="overview">
+          <div class="project-section-label">
+<p class="eyebrow">01</p>
+<h2>Overview</h2>
+</div>
           <div class="project-section-body">
             <p class="project-lead">The project tests whether dense semantic retrieval can improve financial question answering when queries and relevant passages use different vocabulary.</p>
             <p>This project was completed as part of a four-person university group. My primary contribution focused on evaluation design, experimental methodology, BM25 parameter tuning analysis, results interpretation, and project coordination.</p>
@@ -139,133 +108,214 @@
         </section>
 
         <section class="project-section" id="technologies">
-          <div class="project-section-label"><p class="eyebrow">02</p><h2>Technologies</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">02</p>
+<h2>Technologies</h2>
+</div>
           <div class="project-section-body">
             <ul class="tag-list" aria-label="Project technologies">
-              <li>Python</li><li>BM25</li><li>Sentence Transformers</li><li>FAISS</li><li>BEIR</li><li>Gradio</li>
+              <li>Python</li>
+<li>BM25</li>
+<li>Sentence Transformers</li>
+<li>FAISS</li>
+<li>BEIR</li>
+<li>Gradio</li>
             </ul>
           </div>
         </section>
 
         <section class="project-section" id="key-results">
-          <div class="project-section-label"><p class="eyebrow">03</p><h2>Key Results</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">03</p>
+<h2>Key Results</h2>
+</div>
           <div class="project-section-body">
             <div class="result-grid">
-              <article class="result-card"><span class="result-value">0.4443</span><h3>SBERT NDCG@10</h3><p>The strongest ranking-quality result across all evaluated models.</p></article>
-              <article class="result-card"><span class="result-value">0.7936</span><h3>SBERT Recall@100</h3><p>Nearly four-fifths of relevant passages recovered within the top 100.</p></article>
-              <article class="result-card"><span class="result-value">+0.0056</span><h3>BM25 tuning gain</h3><p>Absolute NDCG@10 improvement from the baseline to the tuned model.</p></article>
+              <article class="result-card"><span class="result-value">0.4443</span><h3>SBERT NDCG@10</h3>
+<p>The strongest ranking-quality result across all evaluated models.</p></article>
+              <article class="result-card"><span class="result-value">0.7936</span><h3>SBERT Recall@100</h3>
+<p>Nearly four-fifths of relevant passages recovered within the top 100.</p></article>
+              <article class="result-card"><span class="result-value">+0.0056</span><h3>BM25 tuning gain</h3>
+<p>Absolute NDCG@10 improvement from the baseline to the tuned model.</p></article>
             </div>
           </div>
         </section>
 
         <section class="project-section" id="dataset">
-          <div class="project-section-label"><p class="eyebrow">04</p><h2>Dataset</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">04</p>
+<h2>Dataset</h2>
+</div>
           <div class="project-section-body">
             <p class="project-lead">BEIR FiQA-2018 provides conversational financial questions, answer passages and test relevance judgements.</p>
             <p>The notebook downloads the public BEIR archive at runtime and loads its test split through <code>GenericDataLoader</code>. Titles and passage text are concatenated before indexing. The dataset is not duplicated in either repository.</p>
             <div class="result-grid">
-              <article class="result-card"><span class="result-value">57,638</span><h3>Corpus documents</h3><p>Financial passages available to both retrieval branches.</p></article>
-              <article class="result-card"><span class="result-value">648</span><h3>Test queries</h3><p>Natural-language questions used for final evaluation.</p></article>
-              <article class="result-card"><span class="result-value">648</span><h3>Qrel entries</h3><p>Query-level relevance mappings used by BEIR metrics.</p></article>
+              <article class="result-card"><span class="result-value">57,638</span><h3>Corpus documents</h3>
+<p>Financial passages available to both retrieval branches.</p></article>
+              <article class="result-card"><span class="result-value">648</span><h3>Test queries</h3>
+<p>Natural-language questions used for final evaluation.</p></article>
+              <article class="result-card"><span class="result-value">648</span><h3>Qrel entries</h3>
+<p>Query-level relevance mappings used by BEIR metrics.</p></article>
             </div>
           </div>
         </section>
 
         <section class="project-section" id="retrieval-pipeline">
-          <div class="project-section-label"><p class="eyebrow">05</p><h2>Retrieval Pipeline</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">05</p>
+<h2>Retrieval Pipeline</h2>
+</div>
           <div class="project-section-body">
             <p class="project-lead">A shared corpus feeds two independent retrieval paths: lexical matching with BM25 and semantic matching with SBERT.</p>
             <p>Each branch produces query-to-document scores in BEIR format, retrieves its top 100 candidates and passes them into the same evaluation workflow. Keeping the branches independent makes their differences easier to interpret.</p>
             <figure class="project-figure">
-              <img src="../assets/projects/information-retrieval/retrieval_system_overview.svg" alt="Overview of the shared FiQA corpus branching into BM25 and SBERT retrieval systems before evaluation and interactive search" />
+              <img src="../assets/projects/information-retrieval/retrieval_system_overview.svg" alt="Overview of the shared FiQA corpus branching into BM25 and SBERT retrieval systems before evaluation and interactive search" width="1200" height="900" decoding="async">
               <figcaption>End-to-end system overview, including both retrieval paths and their shared outputs.</figcaption>
             </figure>
           </div>
         </section>
 
         <section class="project-section" id="bm25-optimisation">
-          <div class="project-section-label"><p class="eyebrow">06</p><h2>BM25 Optimisation</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">06</p>
+<h2>BM25 Optimisation</h2>
+</div>
           <div class="project-section-body">
             <p class="project-lead">A nine-configuration grid search examined term-frequency saturation and document-length normalisation.</p>
             <p>The baseline uses <code>k1=0.9</code> and <code>b=0.4</code>. Tuning evaluates <code>k1 ∈ {0.9, 1.2, 1.5}</code> and <code>b ∈ {0.5, 0.75, 0.9}</code>. The best stored setting is <code>k1=0.9</code>, <code>b=0.75</code>, selected by NDCG@10. It retains the baseline term-frequency setting while applying stronger document-length normalisation.</p>
             <div class="figure-stack">
-              <figure class="project-figure"><img src="../assets/projects/information-retrieval/bm25_pipeline.svg" alt="BM25 pipeline from corpus preparation and tokenisation through indexing, top-100 retrieval and BEIR evaluation" loading="lazy" /><figcaption>BM25 indexing, retrieval and evaluation pipeline.</figcaption></figure>
+              <figure class="project-figure"><img src="../assets/projects/information-retrieval/bm25_pipeline.svg" alt="BM25 pipeline from corpus preparation and tokenisation through indexing, top-100 retrieval and BEIR evaluation" loading="lazy" width="1400" height="760" decoding="async"><figcaption>BM25 indexing, retrieval and evaluation pipeline.</figcaption></figure>
               <div class="figure-grid">
-                <figure class="project-figure"><img src="../assets/projects/information-retrieval/bm25_ndcg_heatmap.png" alt="Heatmap of BM25 NDCG at 10 across nine k1 and b combinations" width="3000" height="2250" loading="lazy" decoding="async" /><figcaption>NDCG@10 across the BM25 tuning grid.</figcaption></figure>
-                <figure class="project-figure"><img src="../assets/projects/information-retrieval/bm25_map_heatmap.png" alt="Heatmap of BM25 MAP at 10 across nine k1 and b combinations" width="3000" height="2250" loading="lazy" decoding="async" /><figcaption>MAP@10 across the same parameter combinations.</figcaption></figure>
+                <figure class="project-figure"><img src="../assets/projects/information-retrieval/bm25_ndcg_heatmap.png" alt="Heatmap of BM25 NDCG at 10 across nine k1 and b combinations" width="3000" height="2250" loading="lazy" decoding="async"><figcaption>NDCG@10 across the BM25 tuning grid.</figcaption></figure>
+                <figure class="project-figure"><img src="../assets/projects/information-retrieval/bm25_map_heatmap.png" alt="Heatmap of BM25 MAP at 10 across nine k1 and b combinations" width="3000" height="2250" loading="lazy" decoding="async"><figcaption>MAP@10 across the same parameter combinations.</figcaption></figure>
               </div>
-              <figure class="project-figure"><img src="../assets/projects/information-retrieval/bm25_tuning_improvement.png" alt="Bar chart comparing baseline and tuned BM25 across four retrieval metrics" width="3250" height="2125" loading="lazy" decoding="async" /><figcaption>Tuning produced small but consistent gains across all four final metrics.</figcaption></figure>
+              <figure class="project-figure"><img src="../assets/projects/information-retrieval/bm25_tuning_improvement.png" alt="Bar chart comparing baseline and tuned BM25 across four retrieval metrics" width="3250" height="2125" loading="lazy" decoding="async"><figcaption>Tuning produced small but consistent gains across all four final metrics.</figcaption></figure>
             </div>
           </div>
         </section>
 
         <section class="project-section" id="dense-retrieval">
-          <div class="project-section-label"><p class="eyebrow">07</p><h2>Dense Retrieval with SBERT</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">07</p>
+<h2>Dense Retrieval with SBERT</h2>
+</div>
           <div class="project-section-body">
             <p class="project-lead">Sentence embeddings allow the retriever to match semantic meaning even when queries and passages do not share exact terms.</p>
             <p>The pretrained <code>multi-qa-mpnet-base-dot-v1</code> model encodes documents and queries into 768-dimensional, L2-normalised vectors. Document vectors are stored in <code>faiss.IndexFlatIP</code>; with normalised embeddings, inner-product ranking is equivalent to cosine similarity. The index performs exact rather than approximate search.</p>
-            <figure class="project-figure"><img src="../assets/projects/information-retrieval/sbert_faiss_pipeline.svg" alt="Dense retrieval pipeline using Sentence-BERT encoding, normalised vectors and exact FAISS inner-product search" loading="lazy" /><figcaption>SBERT encoding and exact FAISS search for top-100 semantic retrieval.</figcaption></figure>
+            <figure class="project-figure"><img src="../assets/projects/information-retrieval/sbert_faiss_pipeline.svg" alt="Dense retrieval pipeline using Sentence-BERT encoding, normalised vectors and exact FAISS inner-product search" loading="lazy" width="1400" height="690" decoding="async"><figcaption>SBERT encoding and exact FAISS search for top-100 semantic retrieval.</figcaption></figure>
           </div>
         </section>
 
         <section class="project-section" id="evaluation">
-          <div class="project-section-label"><p class="eyebrow">08</p><h2>Evaluation</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">08</p>
+<h2>Evaluation</h2>
+</div>
           <div class="project-section-body">
             <p>Every run is converted to BEIR's query-to-document score format and evaluated against the FiQA test qrels with four complementary metrics.</p>
             <div class="note-grid">
-              <article class="note-card"><h3>NDCG@10</h3><p>Measures ranking quality in the first ten results and rewards relevant documents placed higher.</p></article>
-              <article class="note-card"><h3>MAP@100</h3><p>Summarises precision at relevant ranks through the first 100 results.</p></article>
-              <article class="note-card"><h3>Recall@100</h3><p>Measures the share of known relevant documents recovered in the top 100.</p></article>
-              <article class="note-card"><h3>P@10</h3><p>Measures the proportion of relevant documents within the first ten results.</p></article>
+              <article class="note-card"><h3>NDCG@10</h3>
+<p>Measures ranking quality in the first ten results and rewards relevant documents placed higher.</p></article>
+              <article class="note-card"><h3>MAP@100</h3>
+<p>Summarises precision at relevant ranks through the first 100 results.</p></article>
+              <article class="note-card"><h3>Recall@100</h3>
+<p>Measures the share of known relevant documents recovered in the top 100.</p></article>
+              <article class="note-card"><h3>P@10</h3>
+<p>Measures the proportion of relevant documents within the first ten results.</p></article>
             </div>
-            <figure class="project-figure"><img src="../assets/projects/information-retrieval/evaluation_workflow.svg" alt="Evaluation workflow converting retrieval outputs to BEIR format and comparing rankings with FiQA relevance judgements" loading="lazy" /><figcaption>Shared evaluation workflow applied consistently to all three retrieval runs.</figcaption></figure>
+            <figure class="project-figure"><img src="../assets/projects/information-retrieval/evaluation_workflow.svg" alt="Evaluation workflow converting retrieval outputs to BEIR format and comparing rankings with FiQA relevance judgements" loading="lazy" width="1200" height="650" decoding="async"><figcaption>Shared evaluation workflow applied consistently to all three retrieval runs.</figcaption></figure>
           </div>
         </section>
 
         <section class="project-section" id="results">
-          <div class="project-section-label"><p class="eyebrow">09</p><h2>Results</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">09</p>
+<h2>Results</h2>
+</div>
           <div class="project-section-body">
             <p class="project-lead">SBERT Dense achieved the strongest stored result on every reported metric.</p>
             <div class="table-scroll" tabindex="0" role="region" aria-label="Retrieval model comparison table">
               <table class="comparison-table">
-                <thead><tr><th scope="col">Model</th><th scope="col">NDCG@10</th><th scope="col">MAP@100</th><th scope="col">Recall@100</th><th scope="col">P@10</th></tr></thead>
+                <thead><tr>
+<th scope="col">Model</th>
+<th scope="col">NDCG@10</th>
+<th scope="col">MAP@100</th>
+<th scope="col">Recall@100</th>
+<th scope="col">P@10</th>
+</tr></thead>
                 <tbody>
-                  <tr><th scope="row">BM25 Baseline</th><td>0.2345</td><td>0.1874</td><td>0.4952</td><td>0.0648</td></tr>
-                  <tr><th scope="row">BM25 Tuned</th><td>0.2401</td><td>0.1918</td><td>0.5084</td><td>0.0674</td></tr>
-                  <tr class="best-result"><th scope="row">SBERT Dense</th><td>0.4443</td><td>0.3792</td><td>0.7936</td><td>0.1249</td></tr>
+                  <tr>
+<th scope="row">BM25 Baseline</th>
+<td>0.2345</td>
+<td>0.1874</td>
+<td>0.4952</td>
+<td>0.0648</td>
+</tr>
+                  <tr>
+<th scope="row">BM25 Tuned</th>
+<td>0.2401</td>
+<td>0.1918</td>
+<td>0.5084</td>
+<td>0.0674</td>
+</tr>
+                  <tr class="best-result">
+<th scope="row">SBERT Dense</th>
+<td>0.4443</td>
+<td>0.3792</td>
+<td>0.7936</td>
+<td>0.1249</td>
+</tr>
                 </tbody>
               </table>
             </div>
             <p class="table-caption">Final stored comparison on the BEIR FiQA-2018 test split. Higher is better for every metric.</p>
             <p>BM25 tuning improves all four metrics, though the gains are modest. Dense retrieval substantially outperforms both lexical variants, consistent with its ability to bridge vocabulary differences between conversational questions and more specialised financial passages.</p>
-            <figure class="project-figure"><img src="../assets/projects/information-retrieval/model_metric_comparison.png" alt="Grouped bar chart comparing BM25 Baseline, BM25 Tuned and SBERT Dense across NDCG, MAP, Recall and precision" width="3500" height="2250" loading="lazy" decoding="async" /><figcaption>Final model comparison across the four reported retrieval metrics.</figcaption></figure>
+            <figure class="project-figure"><img src="../assets/projects/information-retrieval/model_metric_comparison.png" alt="Grouped bar chart comparing BM25 Baseline, BM25 Tuned and SBERT Dense across NDCG, MAP, Recall and precision" width="3500" height="2250" loading="lazy" decoding="async"><figcaption>Final model comparison across the four reported retrieval metrics.</figcaption></figure>
           </div>
         </section>
 
         <section class="project-section" id="interface">
-          <div class="project-section-label"><p class="eyebrow">10</p><h2>Interactive Search Interface</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">10</p>
+<h2>Interactive Search Interface</h2>
+</div>
           <div class="project-section-body">
             <p class="project-lead">A Gradio interface turns the evaluated retrievers into an explorable financial search tool.</p>
             <p>Users can enter a free-text query, choose between tuned BM25 and SBERT Dense, select a Top-K value from 1 to 20 and inspect ranked document IDs, scores, titles and text snippets. Example financial questions support both retrieval modes.</p>
-            <div class="architecture-flow" aria-label="Interactive search interface flow"><div class="architecture-step">Free-text query</div><div class="architecture-step">Model selection</div><div class="architecture-step">Top-K retrieval</div><div class="architecture-step">Ranked results</div></div>
+            <div class="architecture-flow" aria-label="Interactive search interface flow">
+<div class="architecture-step">Free-text query</div>
+<div class="architecture-step">Model selection</div>
+<div class="architecture-step">Top-K retrieval</div>
+<div class="architecture-step">Ranked results</div>
+</div>
             <p>The temporary <code>gradio.live</code> URL preserved in the notebook is not presented as a permanent deployment; running the interface cell creates a new session.</p>
           </div>
         </section>
 
         <section class="project-section" id="challenges">
-          <div class="project-section-label"><p class="eyebrow">11</p><h2>Challenges</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">11</p>
+<h2>Challenges</h2>
+</div>
           <div class="project-section-body">
             <div class="note-grid">
-              <article class="note-card"><h3>Vocabulary mismatch</h3><p>Financial questions and relevant passages can express the same concept using very different terminology.</p></article>
-              <article class="note-card"><h3>Fair comparison</h3><p>Both branches needed identical test queries, cut-offs, qrels and metric definitions.</p></article>
-              <article class="note-card"><h3>Model selection</h3><p>BM25 tuning and final evaluation use the same split, which may overestimate generalisation.</p></article>
-              <article class="note-card"><h3>Compute and indexing</h3><p>Dense document encoding is more resource-intensive, and latency was not systematically benchmarked.</p></article>
+              <article class="note-card"><h3>Vocabulary mismatch</h3>
+<p>Financial questions and relevant passages can express the same concept using very different terminology.</p></article>
+              <article class="note-card"><h3>Fair comparison</h3>
+<p>Both branches needed identical test queries, cut-offs, qrels and metric definitions.</p></article>
+              <article class="note-card"><h3>Model selection</h3>
+<p>BM25 tuning and final evaluation use the same split, which may overestimate generalisation.</p></article>
+              <article class="note-card"><h3>Compute and indexing</h3>
+<p>Dense document encoding is more resource-intensive, and latency was not systematically benchmarked.</p></article>
             </div>
           </div>
         </section>
 
         <section class="project-section" id="learning">
-          <div class="project-section-label"><p class="eyebrow">12</p><h2>What I Learned</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">12</p>
+<h2>What I Learned</h2>
+</div>
           <div class="project-section-body">
             <ul class="learning-list">
               <li>How lexical and dense retrieval solve different aspects of the relevance problem.</li>
@@ -279,7 +329,10 @@
         </section>
 
         <section class="project-section" id="repository">
-          <div class="project-section-label"><p class="eyebrow">13</p><h2>Repository Links</h2></div>
+          <div class="project-section-label">
+<p class="eyebrow">13</p>
+<h2>Repository Links</h2>
+</div>
           <div class="project-section-body">
             <div class="repository-box">
               <p>The repository contains the complete notebook, stored tuning grid, model comparison, diagrams, figures, requirements and presentation.</p>
@@ -291,6 +344,7 @@
           </div>
         </section>
       </div>
+</div>
 
       <nav class="project-pagination" aria-label="Project pagination">
         <a href="cnn-image-classification.html"><span>Previous project</span><strong>Deep Learning Image Classification</strong></a>
@@ -301,10 +355,14 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main">
-          <p><strong>Aaron Gulzar</strong><br /><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p>
-          <div class="footer-links" aria-label="Footer links"><a class="footer-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">GitHub</a><a class="footer-link" href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="footer-link" href="mailto:aarongulzar@hotmail.com">Email</a></div>
+          <p><strong>Aaron Gulzar</strong><br><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p>
+          <div class="footer-links" aria-label="Footer links">
+<a class="footer-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">GitHub</a><a class="footer-link" href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="footer-link" href="mailto:aarongulzar@hotmail.com">Email</a>
+</div>
         </div>
-        <div class="footer-meta"><span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span></div>
+        <div class="footer-meta">
+<span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span>
+</div>
       </div>
     </footer>
   </body>

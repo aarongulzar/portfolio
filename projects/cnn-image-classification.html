@@ -1,23 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Custom CIFAR-10 convolutional architecture and Fashion-MNIST ablation study by Aaron Gulzar." />
-    <meta name="theme-color" content="#0f172a" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Custom CIFAR-10 convolutional architecture and Fashion-MNIST ablation study by Aaron Gulzar.">
+    <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("aaron-gulzar-portfolio-theme");document.documentElement.dataset.theme=t==="light"||t==="dark"?t:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}catch(e){document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}</script><meta name="theme-color" content="#f9f8f5">
     <title>Deep Learning Image Classification | Aaron Gulzar</title>
-    <link rel="stylesheet" href="../style.css" />
-    <script src="../script.js" defer></script>
-  </head>
-  <body>
+    <link rel="stylesheet" href="../style.css?v=91041ae2e578">
+    <script src="../script.js?v=0d115876df13" defer></script>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+  <body class="case-study">
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header">
       <nav class="nav container" aria-label="Primary navigation">
         <a class="brand" href="../index.html" aria-label="Aaron Gulzar home"><span class="brand-mark" aria-hidden="true">AG</span><span>Aaron Gulzar</span></a>
         <div class="nav-menu">
-          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></button>
-          <div class="nav-links" id="primary-links" data-open="false"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#education">Education</a><a href="../index.html#contact">Contact</a></div>
-          <button class="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z" /></svg><span class="theme-label">Theme</span></button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation menu"><svg viewbox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button>
+          <div class="nav-links" id="primary-links" data-open="false">
+<a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../index.html#education">Education</a><a href="../index.html#experience">Experience</a><a href="../index.html#contact">Contact</a><a href="../assets/cv/aaron-gulzar-cv.md" download="" class="nav-cv">CV ↓</a>
+</div>
+          <button class="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"></path></svg><span class="theme-label">Theme</span></button>
         </div>
       </nav>
     </header>
@@ -27,36 +30,150 @@
         <div class="container">
           <a class="breadcrumb" href="../index.html#projects">← All projects</a>
           <p class="eyebrow">Deep Learning · Computer Vision</p>
-          <h1>Deep Learning Image Classification</h1>
+          <div class="project-title-grid">
+<h1>Deep Learning Image Classification</h1>
           <p class="hero-intro">A custom input-conditioned convolutional network for CIFAR-10 and a controlled Fashion-MNIST ablation study, implemented and evaluated with PyTorch.</p>
-          <ul class="project-hero-meta" aria-label="Project summary">
-            <li><strong>Status</strong>Complete</li><li><strong>Context</strong>MSc coursework</li><li><strong>Datasets</strong>CIFAR-10 &amp; Fashion-MNIST</li><li><strong>Primary language</strong>Python</li>
+          </div>
+<ul class="project-hero-meta" aria-label="Project summary">
+            <li>
+<strong>Status</strong>Complete</li>
+<li>
+<strong>Context</strong>MSc coursework</li>
+<li>
+<strong>Datasets</strong>CIFAR-10 &amp; Fashion-MNIST</li>
+<li>
+<strong>Primary language</strong>Python</li>
           </ul>
-          <div class="button-row"><a class="button button-primary" href="https://github.com/aarongulzar/deep-learning-image-classification" target="_blank" rel="noopener noreferrer">View GitHub Repository</a><a class="button button-secondary" href="https://github.com/aarongulzar/deep-learning-image-classification/blob/main/reports/coursework-report.pdf" target="_blank" rel="noopener noreferrer">View Coursework Report</a></div>
+          <div class="button-row">
+<a class="button button-primary" href="https://github.com/aarongulzar/deep-learning-image-classification" target="_blank" rel="noopener noreferrer">View GitHub Repository</a><a class="button button-secondary" href="https://github.com/aarongulzar/deep-learning-image-classification/blob/main/reports/coursework-report.pdf" target="_blank" rel="noopener noreferrer">View Coursework Report</a>
+</div>
         </div>
       </header>
 
       <div class="container project-content">
-        <section class="project-section" id="overview"><div class="project-section-label"><p class="eyebrow">01</p><h2>Overview</h2></div><div class="project-section-body"><p class="project-lead">Two connected experiments investigate architecture design, optimisation and generalisation in image classification.</p><p>For CIFAR-10, I implemented a CNN whose intermediate blocks learn input-dependent weights for several parallel convolutional paths. I improved the initial model by increasing width and path count, adding augmentation and refining optimisation. For Fashion-MNIST, I compared four variants under the same 10-epoch budget to isolate the effects of batch normalisation, dropout and augmentation.</p><p>The notebooks retain training histories, evaluation outputs and plots, while the report documents the methodology and limitations.</p></div></section>
+        <aside aria-label="Case study contents" class="case-index"><p class="eyebrow">In this project</p>
+<nav aria-label="On this page"><ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#technologies">Technologies</a></li>
+<li><a href="#results">Key Results</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#visuals">Visuals</a></li>
+<li><a href="#challenges">Challenges</a></li>
+<li><a href="#learning">What I Learned</a></li>
+<li><a href="#repository">Repository Links</a></li>
+</ol></nav></aside><div class="case-body">
+<section class="project-section" id="overview"><div class="project-section-label">
+<p class="eyebrow">01</p>
+<h2>Overview</h2>
+</div>
+<div class="project-section-body">
+<p class="project-lead">Two connected experiments investigate architecture design, optimisation and generalisation in image classification.</p>
+<p>For CIFAR-10, I implemented a CNN whose intermediate blocks learn input-dependent weights for several parallel convolutional paths. I improved the initial model by increasing width and path count, adding augmentation and refining optimisation. For Fashion-MNIST, I compared four variants under the same 10-epoch budget to isolate the effects of batch normalisation, dropout and augmentation.</p>
+<p>The notebooks retain training histories, evaluation outputs and plots, while the report documents the methodology and limitations.</p>
+</div></section>
 
-        <section class="project-section" id="technologies"><div class="project-section-label"><p class="eyebrow">02</p><h2>Technologies</h2></div><div class="project-section-body"><ul class="tag-list" aria-label="Project technologies"><li>Python</li><li>PyTorch</li><li>torchvision</li><li>NumPy</li><li>Matplotlib</li><li>Jupyter Notebook</li><li>Google Colab</li><li>CUDA</li></ul></div></section>
+        <section class="project-section" id="technologies"><div class="project-section-label">
+<p class="eyebrow">02</p>
+<h2>Technologies</h2>
+</div>
+<div class="project-section-body"><ul class="tag-list" aria-label="Project technologies">
+<li>Python</li>
+<li>PyTorch</li>
+<li>torchvision</li>
+<li>NumPy</li>
+<li>Matplotlib</li>
+<li>Jupyter Notebook</li>
+<li>Google Colab</li>
+<li>CUDA</li>
+</ul></div></section>
 
-        <section class="project-section" id="results"><div class="project-section-label"><p class="eyebrow">03</p><h2>Key Results</h2></div><div class="project-section-body"><div class="result-grid"><article class="result-card"><span class="result-value">87.81%</span><h3>CIFAR-10</h3><p>Best test accuracy from the improved model, recorded at epoch 27.</p></article><article class="result-card"><span class="result-value">+3.05 pp</span><h3>Improvement</h3><p>Gain over the initial CIFAR-10 model's 84.76% result.</p></article><article class="result-card"><span class="result-value">92.50%</span><h3>Fashion-MNIST</h3><p>Best result, produced by the BatchNorm CNN with dropout.</p></article></div></div></section>
+        <section class="project-section" id="results"><div class="project-section-label">
+<p class="eyebrow">03</p>
+<h2>Key Results</h2>
+</div>
+<div class="project-section-body"><div class="result-grid">
+<article class="result-card"><span class="result-value">87.81%</span><h3>CIFAR-10</h3>
+<p>Best test accuracy from the improved model, recorded at epoch 27.</p></article><article class="result-card"><span class="result-value">+3.05 pp</span><h3>Improvement</h3>
+<p>Gain over the initial CIFAR-10 model's 84.76% result.</p></article><article class="result-card"><span class="result-value">92.50%</span><h3>Fashion-MNIST</h3>
+<p>Best result, produced by the BatchNorm CNN with dropout.</p></article>
+</div></div></section>
 
-        <section class="project-section" id="architecture"><div class="project-section-label"><p class="eyebrow">04</p><h2>Architecture</h2></div><div class="project-section-body"><p class="project-lead">The network dynamically combines parallel convolutional transformations for each input.</p><p>Each intermediate block sends the same feature map through independent convolutional paths. Channel-wise spatial averages pass through a fully connected layer and softmax to generate combination coefficients. Four blocks increase channel depth while max pooling reduces spatial resolution from 32×32 to 4×4 before the final ten-class output.</p><div class="figure-stack"><figure class="project-figure"><img src="../assets/projects/deep-learning/cifar10_network_overview.svg" alt="Four-block CIFAR-10 network showing channel progression and max-pooling stages" width="1200" height="565" /><figcaption>Improved CIFAR-10 network from image input to class logits.</figcaption></figure><figure class="project-figure"><img src="../assets/projects/deep-learning/cifar10_intermediate_block.svg" alt="Input-conditioned intermediate block with parallel convolutional paths and learned combination weights" width="1200" height="670" loading="lazy" /><figcaption>The input-conditioned intermediate block used throughout the network.</figcaption></figure></div></div></section>
+        <section class="project-section" id="architecture"><div class="project-section-label">
+<p class="eyebrow">04</p>
+<h2>Architecture</h2>
+</div>
+<div class="project-section-body">
+<p class="project-lead">The network dynamically combines parallel convolutional transformations for each input.</p>
+<p>Each intermediate block sends the same feature map through independent convolutional paths. Channel-wise spatial averages pass through a fully connected layer and softmax to generate combination coefficients. Four blocks increase channel depth while max pooling reduces spatial resolution from 32×32 to 4×4 before the final ten-class output.</p>
+<div class="figure-stack">
+<figure class="project-figure"><img src="../assets/projects/deep-learning/cifar10_network_overview.svg" alt="Four-block CIFAR-10 network showing channel progression and max-pooling stages" width="1200" height="610" decoding="async"><figcaption>Improved CIFAR-10 network from image input to class logits.</figcaption></figure><figure class="project-figure"><img src="../assets/projects/deep-learning/cifar10_intermediate_block.svg" alt="Input-conditioned intermediate block with parallel convolutional paths and learned combination weights" width="1200" height="640" loading="lazy" decoding="async"><figcaption>The input-conditioned intermediate block used throughout the network.</figcaption></figure>
+</div>
+</div></section>
 
-        <section class="project-section" id="visuals"><div class="project-section-label"><p class="eyebrow">05</p><h2>Visuals</h2></div><div class="project-section-body"><p>The improved CIFAR-10 model used random cropping, horizontal flipping, cross-entropy loss, AdamW, weight decay and cosine-annealing learning-rate scheduling. Loss declined while test accuracy peaked at 87.81%; the widening train-test gap provided evidence of some overfitting.</p><div class="figure-grid"><figure class="project-figure"><img src="../assets/projects/deep-learning/cifar10_training_accuracy.png" alt="CIFAR-10 training and test accuracy over 30 epochs" width="841" height="470" loading="lazy" decoding="async" /><figcaption>Training and test accuracy across the preserved 30-epoch run.</figcaption></figure><figure class="project-figure"><img src="../assets/projects/deep-learning/cifar10_training_loss.png" alt="CIFAR-10 cross-entropy training loss by batch" width="849" height="470" loading="lazy" decoding="async" /><figcaption>Batch-level training loss across the same run.</figcaption></figure></div><div class="figure-stack" style="margin-top: 1.25rem"><figure class="project-figure"><img src="../assets/projects/deep-learning/fashion_mnist_ablation.svg" alt="Fashion-MNIST protocol branching into four controlled CNN variants" width="1200" height="760" loading="lazy" /><figcaption>Shared protocol and best test accuracy for each ablation-study variant.</figcaption></figure><figure class="project-figure"><img src="../assets/projects/deep-learning/fashion_mnist_test_accuracy.png" alt="Test-accuracy curves for four Fashion-MNIST CNN variants" width="842" height="470" loading="lazy" decoding="async" /><figcaption>Test accuracy per epoch across the four Fashion-MNIST models.</figcaption></figure></div></div></section>
+        <section class="project-section" id="visuals"><div class="project-section-label">
+<p class="eyebrow">05</p>
+<h2>Visuals</h2>
+</div>
+<div class="project-section-body">
+<p>The improved CIFAR-10 model used random cropping, horizontal flipping, cross-entropy loss, AdamW, weight decay and cosine-annealing learning-rate scheduling. Loss declined while test accuracy peaked at 87.81%; the widening train-test gap provided evidence of some overfitting.</p>
+<div class="figure-grid">
+<figure class="project-figure"><img src="../assets/projects/deep-learning/cifar10_training_accuracy.png" alt="CIFAR-10 training and test accuracy over 30 epochs" width="841" height="470" loading="lazy" decoding="async"><figcaption>Training and test accuracy across the preserved 30-epoch run.</figcaption></figure><figure class="project-figure"><img src="../assets/projects/deep-learning/cifar10_training_loss.png" alt="CIFAR-10 cross-entropy training loss by batch" width="849" height="470" loading="lazy" decoding="async"><figcaption>Batch-level training loss across the same run.</figcaption></figure>
+</div>
+<div class="figure-stack figure-following">
+<figure class="project-figure"><img src="../assets/projects/deep-learning/fashion_mnist_ablation.svg" alt="Fashion-MNIST protocol branching into four controlled CNN variants" width="1200" height="680" loading="lazy" decoding="async"><figcaption>Shared protocol and best test accuracy for each ablation-study variant.</figcaption></figure><figure class="project-figure"><img src="../assets/projects/deep-learning/fashion_mnist_test_accuracy.png" alt="Test-accuracy curves for four Fashion-MNIST CNN variants" width="842" height="470" loading="lazy" decoding="async"><figcaption>Test accuracy per epoch across the four Fashion-MNIST models.</figcaption></figure>
+</div>
+</div></section>
 
-        <section class="project-section" id="challenges"><div class="project-section-label"><p class="eyebrow">06</p><h2>Challenges</h2></div><div class="project-section-body"><div class="note-grid"><article class="note-card"><h3>Tensor consistency</h3><p>Maintaining compatible dimensions across parallel paths and their weighted combination.</p></article><article class="note-card"><h3>Generalisation</h3><p>Improving test performance while monitoring a growing training-to-test gap.</p></article><article class="note-card"><h3>Controlled comparison</h3><p>Holding the Fashion-MNIST budget constant so architectural changes remained interpretable.</p></article><article class="note-card"><h3>Evaluation limits</h3><p>Recognising the effect of repeated test evaluation, single runs and a short augmentation budget.</p></article></div></div></section>
+        <section class="project-section" id="challenges"><div class="project-section-label">
+<p class="eyebrow">06</p>
+<h2>Challenges</h2>
+</div>
+<div class="project-section-body"><div class="note-grid">
+<article class="note-card"><h3>Tensor consistency</h3>
+<p>Maintaining compatible dimensions across parallel paths and their weighted combination.</p></article><article class="note-card"><h3>Generalisation</h3>
+<p>Improving test performance while monitoring a growing training-to-test gap.</p></article><article class="note-card"><h3>Controlled comparison</h3>
+<p>Holding the Fashion-MNIST budget constant so architectural changes remained interpretable.</p></article><article class="note-card"><h3>Evaluation limits</h3>
+<p>Recognising the effect of repeated test evaluation, single runs and a short augmentation budget.</p></article>
+</div></div></section>
 
-        <section class="project-section" id="learning"><div class="project-section-label"><p class="eyebrow">07</p><h2>What I Learned</h2></div><div class="project-section-body"><ul class="learning-list"><li>How to translate a custom architecture into reusable PyTorch modules.</li><li>Why training and test curves must be interpreted together when diagnosing overfitting.</li><li>How batch normalisation, dropout and augmentation affect optimisation and generalisation differently.</li><li>Why validation splits, repeated seeds and summary statistics matter for reliable model selection.</li><li>How to preserve results and document limitations so experiments remain auditable.</li></ul></div></section>
+        <section class="project-section" id="learning"><div class="project-section-label">
+<p class="eyebrow">07</p>
+<h2>What I Learned</h2>
+</div>
+<div class="project-section-body"><ul class="learning-list">
+<li>How to translate a custom architecture into reusable PyTorch modules.</li>
+<li>Why training and test curves must be interpreted together when diagnosing overfitting.</li>
+<li>How batch normalisation, dropout and augmentation affect optimisation and generalisation differently.</li>
+<li>Why validation splits, repeated seeds and summary statistics matter for reliable model selection.</li>
+<li>How to preserve results and document limitations so experiments remain auditable.</li>
+</ul></div></section>
 
-        <section class="project-section" id="repository"><div class="project-section-label"><p class="eyebrow">08</p><h2>Repository Links</h2></div><div class="project-section-body"><div class="repository-box"><p>The repository contains both notebooks, recorded outputs, diagrams, figures, requirements and reports.</p><div class="button-row"><a class="button button-primary" href="https://github.com/aarongulzar/deep-learning-image-classification" target="_blank" rel="noopener noreferrer">GitHub Repository</a><a class="button button-secondary" href="https://github.com/aarongulzar/deep-learning-image-classification/blob/main/reports/coursework-report.pdf" target="_blank" rel="noopener noreferrer">Coursework Report</a></div></div></div></section>
+        <section class="project-section" id="repository"><div class="project-section-label">
+<p class="eyebrow">08</p>
+<h2>Repository Links</h2>
+</div>
+<div class="project-section-body"><div class="repository-box">
+<p>The repository contains both notebooks, recorded outputs, diagrams, figures, requirements and reports.</p>
+<div class="button-row">
+<a class="button button-primary" href="https://github.com/aarongulzar/deep-learning-image-classification" target="_blank" rel="noopener noreferrer">GitHub Repository</a><a class="button button-secondary" href="https://github.com/aarongulzar/deep-learning-image-classification/blob/main/reports/coursework-report.pdf" target="_blank" rel="noopener noreferrer">Coursework Report</a>
+</div>
+</div></div></section>
       </div>
+</div>
 
       <nav class="project-pagination" aria-label="Project pagination"><a href="portfolio-website.html"><span>Previous project</span><strong>Portfolio Website</strong></a><a href="information-retrieval.html"><span>Next project</span><strong>Information Retrieval</strong></a></nav>
     </main>
 
-    <footer class="site-footer"><div class="container"><div class="footer-main"><p><strong>Aaron Gulzar</strong><br /><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p><div class="footer-links" aria-label="Footer links"><a class="footer-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">GitHub</a><a class="footer-link" href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="footer-link" href="mailto:aarongulzar@hotmail.com">Email</a></div></div><div class="footer-meta"><span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span></div></div></footer>
+    <footer class="site-footer"><div class="container">
+<div class="footer-main">
+<p><strong>Aaron Gulzar</strong><br><span class="link-unavailable">Machine Learning · Data Science · Software Engineering</span></p>
+<div class="footer-links" aria-label="Footer links">
+<a class="footer-link" href="https://github.com/aarongulzar" target="_blank" rel="noopener noreferrer">GitHub</a><a class="footer-link" href="https://www.linkedin.com/in/aaron-gulzar-b1b613243/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="footer-link" href="mailto:aarongulzar@hotmail.com">Email</a>
+</div>
+</div>
+<div class="footer-meta">
+<span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span>
+</div>
+</div></footer>
   </body>
 </html>
