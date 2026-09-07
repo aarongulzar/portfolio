@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A high-level portfolio summary of Aaron Gulzar's completed MSc project in reliable machine-learning evaluation. Public materials are withheld pending supervisor approval.">
-    <meta name="robots" content="noindex, noarchive, noimageindex">
+    <meta name="description" content="Aaron Gulzar's MSc project on heart-disease model reliability, with evaluation figures, findings on calibration and dataset shift, and a reproducible Python workflow.">
     <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("aaron-gulzar-portfolio-theme");document.documentElement.dataset.theme=t==="light"||t==="dark"?t:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}catch(e){document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}</script>
     <meta name="theme-color" content="#f9f8f5">
     <title>Heart-Disease Model Transportability Audit | Aaron Gulzar</title>
@@ -36,18 +35,14 @@
           <p class="eyebrow">MSc Project · Reliable Machine Learning</p>
           <div class="project-title-grid">
             <h1>Heart-Disease Model Transportability Audit</h1>
-            <p class="hero-intro">A completed research project examining how predictive models should be evaluated when data collection and patient populations change between clinical settings.</p>
+            <p class="hero-intro">How well does a predictive model travel? My MSc project explored the reliability of heart-disease classifiers across clinical datasets, from validation design to the interpretation of predicted probabilities.</p>
           </div>
           <ul class="project-hero-meta" aria-label="Project summary">
-            <li><strong>Status</strong>Publication pending</li>
+            <li><strong>Status</strong>Project completed</li>
             <li><strong>Focus</strong>Reliable model evaluation</li>
-            <li><strong>Materials</strong>Private</li>
+            <li><strong>Context</strong>MSc Data Science</li>
             <li><strong>Primary language</strong>Python</li>
           </ul>
-          <div class="card-actions">
-            <span class="button button-disabled" aria-disabled="true">Report withheld</span>
-            <span class="button button-disabled" aria-disabled="true">Repository private</span>
-          </div>
         </div>
       </header>
 
@@ -55,66 +50,105 @@
         <aside aria-label="Case study contents" class="case-index">
           <p class="eyebrow">In this project</p>
           <nav aria-label="On this page"><ol>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#capabilities">Capabilities demonstrated</a></li>
-            <li><a href="#publication-status">Publication status</a></li>
-            <li><a href="#release-plan">Release plan</a></li>
-            <li><a href="#responsible-use">Responsible use</a></li>
+            <li><a href="#overview">The research question</a></li>
+            <li><a href="#approach">My approach</a></li>
+            <li><a href="#findings">What the evaluation showed</a></li>
+            <li><a href="#robustness">Further investigations</a></li>
+            <li><a href="#capabilities">Skills and tools</a></li>
+            <li><a href="#reflection">Reflection</a></li>
           </ol></nav>
         </aside>
 
         <div class="case-body">
           <section class="project-section" id="overview">
-            <div class="project-section-label"><p class="eyebrow">01</p><h2>Overview</h2></div>
+            <div class="project-section-label"><p class="eyebrow">01</p><h2>The research question</h2></div>
             <div class="project-section-body">
-              <p class="project-lead">The project treats performance in a development dataset as the beginning of model evaluation, not the end.</p>
-              <p>It was designed to examine model reliability under cross-site change, with particular attention to reproducible evaluation, uncertainty, calibration and transparent limitations. This page intentionally provides only a high-level portfolio summary while permission for public release is pending.</p>
+              <p class="project-lead">Strong performance on one dataset raises a further question: will the same model work reliably in another setting?</p>
+              <p>Clinical datasets can differ in patient populations, measurement practices and missing information. I used four historical UCI heart-disease cohorts to investigate how to assess a classifier under those changes. Models were developed using Cleveland data and evaluated on Hungary, Switzerland and VA Long Beach. The endpoint was existing angiographic disease, rather than future cardiovascular risk.</p>
+              <p>I completed this work for the MSc Data Science programme at Queen Mary University of London. My contribution covered data preparation, experimental design, implementation, analysis and the written dissertation.</p>
+            </div>
+          </section>
+
+          <section class="project-section" id="approach">
+            <div class="project-section-label"><p class="eyebrow">02</p><h2>My approach</h2></div>
+            <div class="project-section-body">
+              <div class="note-grid">
+                <article class="note-card"><h3>Understand the data</h3><p>I checked variable definitions, missing values and differences in measurement availability across datasets. This established which inputs could be compared meaningfully.</p></article>
+                <article class="note-card"><h3>Control the evaluation</h3><p>I used nested cross-validation to separate model tuning from performance assessment. Preprocessing was fitted within training folds to limit information leakage.</p></article>
+                <article class="note-card"><h3>Compare models fairly</h3><p>I compared a logistic-regression baseline with more flexible classifiers using shared evaluation splits. After development, I evaluated the fitted pipelines on other datasets without refitting them there.</p></article>
+                <article class="note-card"><h3>Examine reliability</h3><p>I assessed ranking performance, calibration and probability error, alongside uncertainty and sensitivity analyses. These address different aspects of model behaviour.</p></article>
+              </div>
+              <p>I documented the analysis and added automated checks for stored outputs, making it possible to trace reported evidence back to the experiment that produced it.</p>
+              <figure class="project-figure">
+                <img src="../assets/projects/heart-disease/figure1_study_workflow.png" alt="Study workflow from Cleveland-only model development through repeated nested validation to frozen evaluation in Hungary, Switzerland and VA Long Beach" loading="lazy" width="2733" height="1168" decoding="async">
+                <figcaption>Study workflow. Target predictions were saved without outcomes and hash-locked before external evaluation. <a href="../assets/projects/heart-disease/figure1_study_workflow.png" target="_blank" rel="noopener noreferrer">View full-size figure</a>.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="project-section" id="findings">
+            <div class="project-section-label"><p class="eyebrow">03</p><h2>What the evaluation showed</h2></div>
+            <div class="project-section-body">
+              <p class="project-lead">A model's ranking performance and the reliability of its probabilities need separate scrutiny.</p>
+              <h3>Compare performance across sites</h3>
+              <p>In internal validation, random forest had a ROC-AUC of 0.874 and logistic regression 0.869. The corrected comparison did not establish an advantage for random forest: its mean outer-fold difference was +0.004, with a 95% confidence interval from −0.012 to +0.021. This uncertainty does not establish that the models are equivalent.</p>
+              <p>After the fitted pipelines were applied to the other cohorts, performance varied by destination. Across the five model families, ROC-AUC ranged from 0.857–0.888 in Hungary, 0.747–0.786 in Switzerland and 0.686–0.743 in VA Long Beach.</p>
+              <figure class="project-figure">
+                <img src="../assets/projects/heart-disease/figure2_internal_external_primary_performance.png" alt="ROC-AUC and Brier score by model and cohort: ranking performance varies by destination, with lower ROC-AUC in Switzerland and VA Long Beach" loading="lazy" width="3632" height="1524" decoding="async">
+                <figcaption>Performance using the primary eight-predictor representation. Higher ROC-AUC indicates better ranking; lower Brier score indicates lower probability error. Brier scores also depend on cohort prevalence and case mix. <a href="../assets/projects/heart-disease/figure2_internal_external_primary_performance.png" target="_blank" rel="noopener noreferrer">View full-size figure</a>.</figcaption>
+              </figure>
+              <h3>Check the probabilities</h3>
+              <p>In Switzerland, the calibration plots and fitted calibration parameters indicated underprediction. The analysis fitted calibration intercept and slope together; the positive intercepts should be interpreted alongside those slopes and the plots. This illustrates why ranking performance alone cannot establish that predicted probabilities are reliable.</p>
+              <figure class="project-figure">
+                <img src="../assets/projects/heart-disease/figure3_calibration_by_cohort.png" alt="Calibration plots across the four cohorts; Swiss observations show systematic underprediction relative to the diagonal of agreement" loading="lazy" width="3122" height="2714" decoding="async">
+                <figcaption>Calibration compares predicted probabilities with observed disease proportions. Switzerland contained only eight disease-negative participants, limiting the precision of discrimination and calibration estimates. <a href="../assets/projects/heart-disease/figure3_calibration_by_cohort.png" target="_blank" rel="noopener noreferrer">View full-size figure</a>.</figcaption>
+              </figure>
+              <h3>Investigate the measurement differences</h3>
+              <p>The main analysis used eight shared predictors. A sensitivity analysis used the conventional 13-predictor representation: it improved internal logistic-regression performance, yet increased Brier error for every model in Switzerland and VA Long Beach. Several added measurements were structurally missing across sites. This is a descriptive comparison; it does not isolate the cause of the performance changes.</p>
+              <figure class="project-figure">
+                <img src="../assets/projects/heart-disease/figure4_dataset_shift.png" alt="Cross-cohort distributions and missingness patterns, showing differences in which measurements are available across the four datasets" loading="lazy" width="3164" height="2076" decoding="async">
+                <figcaption>Dataset differences provide context for the performance comparisons. Filling missing values keeps a pipeline executable but does not recover information that was never measured. <a href="../assets/projects/heart-disease/figure4_dataset_shift.png" target="_blank" rel="noopener noreferrer">View full-size figure</a>.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="project-section" id="robustness">
+            <div class="project-section-label"><p class="eyebrow">04</p><h2>Further investigations</h2></div>
+            <div class="project-section-body">
+              <h3>Do feature explanations travel?</h3>
+              <p>I compared permutation-importance rankings across cohorts. Agreement with the development cohort was particularly weak in Switzerland, showing why explanations should be interpreted in the context of the model and dataset being evaluated.</p>
+              <figure class="project-figure">
+                <img src="../assets/projects/heart-disease/figure5_permutation_rank_stability.png" alt="Permutation-importance rank agreement within Cleveland and across external cohorts, with weak agreement for Switzerland" loading="lazy" width="2502" height="1415" decoding="async">
+                <figcaption>Permutation importance measures a fitted model's predictive dependence on its inputs. These rankings do not establish biological causation. <a href="../assets/projects/heart-disease/figure5_permutation_rank_stability.png" target="_blank" rel="noopener noreferrer">View full-size figure</a>.</figcaption>
+              </figure>
+              <h3>Does a larger neural network help?</h3>
+              <p>A controlled capacity analysis compared small, medium and larger multilayer perceptrons, including a regularised configuration. Increasing capacity improved on a weak small-network baseline internally, but no single capacity ordering persisted across all external sites and metrics.</p>
+              <figure class="project-figure">
+                <img src="../assets/projects/heart-disease/figure6_mlp_capacity_ablation.png" alt="Internal and external ROC-AUC and Brier scores for controlled multilayer-perceptron capacity configurations, with no consistent ordering across all target cohorts" loading="lazy" width="3272" height="1418" decoding="async">
+                <figcaption>Capacity sensitivity within the tested configurations. The results do not establish a universal preference for larger or smaller networks. <a href="../assets/projects/heart-disease/figure6_mlp_capacity_ablation.png" target="_blank" rel="noopener noreferrer">View full-size figure</a>.</figcaption>
+              </figure>
             </div>
           </section>
 
           <section class="project-section" id="capabilities">
-            <div class="project-section-label"><p class="eyebrow">02</p><h2>Capabilities demonstrated</h2></div>
+            <div class="project-section-label"><p class="eyebrow">05</p><h2>Skills and tools</h2></div>
             <div class="project-section-body">
-              <div class="note-grid">
-                <article class="note-card"><h3>Evaluation design</h3><p>Structured development and external-evaluation stages to reduce optimistic performance claims.</p></article>
-                <article class="note-card"><h3>Reproducible analysis</h3><p>Built a documented Python workflow with controlled inputs, repeatable outputs and validation checks.</p></article>
-                <article class="note-card"><h3>Reliability assessment</h3><p>Considered discrimination, probability quality, uncertainty and sensitivity rather than relying on one headline metric.</p></article>
-                <article class="note-card"><h3>Responsible reporting</h3><p>Separated evidence from interpretation and documented intended-use boundaries and limitations.</p></article>
-              </div>
-              <ul class="tag-list" aria-label="Project technologies and methods">
-                <li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>Statistical evaluation</li><li>Reproducibility</li>
+              <p class="project-lead">The work combined practical machine learning with statistical reasoning and research communication.</p>
+              <p>I used pandas and NumPy for data preparation, scikit-learn for preprocessing and model pipelines, SciPy for statistical analysis, and Matplotlib for diagnostic visualisation. Version control, recorded environments and automated validation supported reproducibility.</p>
+              <p>The project developed my ability to turn a research question into an evaluation plan, investigate data quality, interpret uncertainty and explain methodological choices and limitations.</p>
+              <ul class="tag-list" aria-label="Project technologies">
+                <li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>SciPy</li><li>Matplotlib</li><li>Git</li><li>GitHub Actions</li>
               </ul>
             </div>
           </section>
 
-          <section class="project-section" id="publication-status">
-            <div class="project-section-label"><p class="eyebrow">03</p><h2>Publication status</h2></div>
+          <section class="project-section" id="reflection">
+            <div class="project-section-label"><p class="eyebrow">06</p><h2>Reflection</h2></div>
             <div class="project-section-body">
-              <p class="project-lead">The dissertation has been submitted for academic assessment, but the project is not currently being distributed as a public paper or archive.</p>
-              <div class="repository-box">
-                <p><strong>Access is intentionally restricted.</strong><br>The report, figures, numerical results, code repository and permanent archive files remain private while written supervisor permission is pending. No project download is available from this website.</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="project-section" id="release-plan">
-            <div class="project-section-label"><p class="eyebrow">04</p><h2>Release plan</h2></div>
-            <div class="project-section-body">
-              <p class="project-lead">If public release is approved, the portfolio entry will be expanded as a carefully reviewed research case study.</p>
-              <div class="note-grid">
-                <article class="note-card"><h3>Technical report</h3><p>A publication-quality account of the question, design, evidence, limitations and conclusions.</p></article>
-                <article class="note-card"><h3>Reproducible repository</h3><p>Documented code, environments, validation steps and appropriate supporting materials.</p></article>
-                <article class="note-card"><h3>Evidence-led figures</h3><p>Selected visualisations that clarify the evaluation without overstating clinical relevance.</p></article>
-                <article class="note-card"><h3>Citable archive</h3><p>A versioned research record and DOI only if explicitly authorised.</p></article>
-              </div>
-            </div>
-          </section>
-
-          <section class="project-section" id="responsible-use">
-            <div class="project-section-label"><p class="eyebrow">05</p><h2>Responsible use</h2></div>
-            <div class="project-section-body">
-              <p class="project-lead">This academic project is a methodological evaluation, not a clinical product.</p>
-              <p>It is not intended for diagnosis, treatment decisions or deployment in healthcare. Any later public version will retain clear limitations, provenance, citation information and an explicit intended-use statement.</p>
+              <p class="project-lead">Reliable evaluation depends on the data, the experimental design and the meaning of each metric.</p>
+              <p>This project sharpened my attention to how modelling decisions can affect an evaluation, how to communicate uncertainty and how to make an analysis auditable. Those habits are relevant to any machine-learning project involving changing data or consequential decisions.</p>
+              <p>The study used historical data for academic research; it does not establish suitability for clinical use.</p>
+              <p><small>This page presents the MSc project and selected analysis figures. It is not a peer-reviewed publication. The full report and code are currently restricted; a separate paper citation will be added if published.</small></p>
             </div>
           </section>
         </div>
