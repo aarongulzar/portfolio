@@ -3,7 +3,7 @@
   <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Stud Safari Roblox zoo-management software project by Aaron Gulzar.">
+<meta name="description" content="Play Stud Safari on Roblox, a wildlife sanctuary builder from Wildtrail Productions. Explore the game and Aaron Gulzar's engineering case study.">
 <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("aaron-gulzar-portfolio-theme");document.documentElement.dataset.theme=t==="light"||t==="dark"?t:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}catch(e){document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}</script><meta name="theme-color" content="#f9f8f5">
 <title>Stud Safari | Aaron Gulzar</title>
 <link rel="stylesheet" href="../style.css?v=91041ae2e578">
@@ -23,18 +23,21 @@
 <a class="breadcrumb" href="../index.html#projects">← All projects</a><p class="eyebrow">Software Engineering · Game Systems</p>
 <div class="project-title-grid">
 <h1>Stud Safari</h1>
-<p class="hero-intro">A Roblox zoo-management project using Lua to explore modular gameplay systems, player interaction and maintainable game logic.</p>
+<p class="hero-intro">Build your own wildlife sanctuary. Rescue animals, design their enclosures, and care for your collection as the weather changes.</p>
 </div>
 <ul class="project-hero-meta" aria-label="Project summary">
 <li>
-<strong>Status</strong>In Progress</li>
+<strong>Status</strong>Live on Roblox</li>
 <li>
 <strong>Platform</strong>Roblox</li>
 <li>
 <strong>Genre</strong>Management game</li>
 <li>
-<strong>Primary language</strong>Lua</li>
+<strong>Primary language</strong>Luau</li>
 </ul>
+<div class="button-row">
+<a class="button button-primary" href="https://www.roblox.com/games/132789116585049/Stud-Safari">Play on Roblox</a>
+</div>
 </div></header>
       <div class="container project-content">
         <aside aria-label="Case study contents" class="case-index"><p class="eyebrow">In this project</p>
@@ -46,27 +49,26 @@
 <li><a href="#visuals">Visuals</a></li>
 <li><a href="#challenges">Challenges</a></li>
 <li><a href="#what-i-learned">What I Learned</a></li>
-<li><a href="#repository-links">Repository Links</a></li>
+<li><a href="#play">Play Stud Safari</a></li>
 </ol></nav></aside><div class="case-body">
 <section class="project-section" id="overview"><div class="project-section-label">
 <p class="eyebrow">01</p>
 <h2>Overview</h2>
 </div>
 <div class="project-section-body">
-<p class="project-lead">Stud Safari extends the portfolio beyond notebooks into an interactive, stateful software project.</p>
-<p>The concept centres on building and managing a virtual zoo. Development involves connecting player actions to habitat, animal, economy and progression systems while keeping the code organised enough for features to evolve independently.</p>
+<p class="project-lead">Stud Safari is a live Roblox zoo-management game published by Wildtrail Productions.</p>
+<p>Players build habitats, rescue animals, and collect variants and mutations. Animal care affects value, and weather and daily rewards give players reasons to return to their sanctuary.</p>
 </div></section>
         <section class="project-section" id="technologies"><div class="project-section-label">
 <p class="eyebrow">02</p>
 <h2>Technologies</h2>
 </div>
 <div class="project-section-body"><ul class="tag-list" aria-label="Project technologies">
-<li>Lua</li>
+<li>Luau</li>
 <li>Roblox Studio</li>
-<li>VS Code</li>
+<li>Rojo</li>
 <li>Git</li>
-<li>Event-driven scripting</li>
-<li>Game systems</li>
+<li>Roblox DataStores</li>
 </ul></div></section>
         <section class="project-section" id="key-results"><div class="project-section-label">
 <p class="eyebrow">03</p>
@@ -75,15 +77,15 @@
 <div class="project-section-body"><div class="result-grid">
 <article class="result-card"><span class="result-value">Modular</span><h3>System design</h3>
 <p>Gameplay responsibilities are separated into focused components.</p></article><article class="result-card"><span class="result-value">Interactive</span><h3>Player state</h3>
-<p>Actions update the world, economy and progression state.</p></article><article class="result-card"><span class="result-value">In progress</span><h3>Delivery</h3>
-<p>No player-count or engagement claims are made before release.</p></article>
+<p>Actions update the world, economy and progression state.</p></article><article class="result-card"><span class="result-value">Live</span><h3>Delivery</h3>
+<p>Playable on Roblox and in active development.</p></article>
 </div></div></section>
         <section class="project-section" id="architecture"><div class="project-section-label">
 <p class="eyebrow">04</p>
 <h2>Architecture</h2>
 </div>
 <div class="project-section-body">
-<p>The intended structure separates user interaction from domain logic and persistence concerns, reducing tight coupling between game objects.</p>
+<p>Client controllers handle input, placement previews, and interface updates. Server services validate placement and purchases, manage animal and sanctuary state, and persist player progress. Shared Luau modules hold definitions and grid rules used by both sides.</p>
 <div class="architecture-flow" aria-label="Stud Safari system architecture">
 <div class="architecture-step">Player input</div>
 <div class="architecture-step">Interaction layer</div>
@@ -96,9 +98,10 @@
 <p class="eyebrow">05</p>
 <h2>Visuals</h2>
 </div>
-<div class="project-section-body"><div class="visual-placeholder"><div>
-<strong>Gameplay media pending</strong><p>Screenshots will be added when representative gameplay and interface states are ready to publish.</p>
-</div></div></div></section>
+<div class="project-section-body"><figure class="project-figure">
+<img src="../assets/projects/stud-safari/sanctuary.png" alt="Stud Safari artwork showing a giraffe and capybara in player-built enclosures" loading="lazy" width="768" height="432" decoding="async">
+<figcaption>Official Stud Safari artwork from the Roblox experience page.</figcaption>
+</figure></div></section>
         <section class="project-section" id="challenges"><div class="project-section-label">
 <p class="eyebrow">06</p>
 <h2>Challenges</h2>
@@ -120,13 +123,13 @@
 <li>How player feedback must stay aligned with underlying state changes.</li>
 <li>How version control supports iterative development outside conventional web or data projects.</li>
 </ul></div></section>
-        <section class="project-section" id="repository-links"><div class="project-section-label">
+        <section class="project-section" id="play"><div class="project-section-label">
 <p class="eyebrow">08</p>
-<h2>Repository Links</h2>
+<h2>Play Stud Safari</h2>
 </div>
 <div class="project-section-body"><div class="repository-box">
-<p>A public repository or Roblox experience URL has not been provided.</p>
-<span class="button button-disabled" aria-disabled="true">Repository unavailable</span>
+<p>Visit the official Roblox experience page to play and see the latest game updates.</p>
+<a class="button button-primary" href="https://www.roblox.com/games/132789116585049/Stud-Safari">Play on Roblox</a>
 </div></div></section>
       </div>
 </div>
@@ -140,7 +143,7 @@
 </div>
 </div>
 <div class="footer-meta">
-<span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated August 2026</span>
+<span>© <span id="year">2026</span> Aaron Gulzar</span><span>Last updated November 2026</span>
 </div>
 </div></footer>
   </body>
